@@ -11,7 +11,7 @@ const App = () => {
     <Switch>
       <Route excat path="/about" component={About}></Route>
       <Route excat path="/contact" component={Contact}></Route>
-      <Route excat path="/koinonia/vendor" component={Vendors}></Route>
+      <Route excat path="/koinonia/vendors" component={Vendors}></Route>
       <Route excat path="/koinonia/products" component={Products}></Route>
       <Route excat path="/" component={Home}></Route>
     </Switch>

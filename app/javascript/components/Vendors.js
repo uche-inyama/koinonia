@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Navigation from './Navigation'
 
 const Vendors = () => {
   return (
-    <div>Vendors</div>
+    <Fragment>
+      <Navigation />
+      <div>Vendors</div>
+    </Fragment>
   )
 }
 export default Vendors;
