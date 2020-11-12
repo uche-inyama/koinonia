@@ -1,15 +1,19 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-
+import Home from './Home'
+import About from './About'
+import Products from './Products'
+import Vendors from './Vendors'
+import Contact from './Contact'
 
 const App = () => {
   return (
     <Switch>
-      <Route excat path="/" component={Home}></Route>
       <Route excat path="/about" component={About}></Route>
-      <Route excat path="/koinomia/:vendor" component={Vendors}></Route>
-      <Route excat path="/koinomia/:product" component={Products}></Route>
       <Route excat path="/contact" component={Contact}></Route>
+      <Route excat path="/koinonia/vendor" component={Vendors}></Route>
+      <Route excat path="/koinonia/products" component={Products}></Route>
+      <Route excat path="/" component={Home}></Route>
     </Switch>
   )
 }
