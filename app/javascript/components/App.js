@@ -9,19 +9,15 @@ import Vendors from './Vendors';
 import Contact from './Contact';
 
 const App = () => {
-  const Container = styled.div`
-    padding: 20px;
-  `
+
   return (
-    <Container>
-      <Switch>
-        <Route excat path="/about" component={About}></Route>
-        <Route excat path="/contact" component={Contact}></Route>
-        <Route excat path="/koinonia/vendors" component={Vendors}></Route>
-        <Route excat path="/koinonia/products" component={Products}></Route>
-        <Route excat path="/" component={Home}></Route>
-      </Switch>
-    </Container>
+    <Switch>
+      <Route excat path="/about" component={About}></Route>
+      <Route excat path="/contact" component={Contact}></Route>
+      <Route excat path="/koinonia/vendors" component={Vendors}></Route>
+      <Route excat path="/koinonia/products" component={Products}></Route>
+      <Route excat path="/" component={Home}></Route>
+    </Switch>
   )
 }
 export default App;

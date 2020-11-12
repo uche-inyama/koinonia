@@ -27,20 +27,35 @@ const ImageWrapper = styled.div`
 const CardList = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap:5px;
+  grid-gap:10px;
   text-align: center;
 
 `
 const Card = styled.div`
   border: solid black 1px;
 `
+
+const VendorSection = styled.div`
+  padding: 0 20px;
+  h2 {
+    text-align: center;
+    font-size: 2em;
+    weight: 700;
+    padding: 50px 0;
+  }
+  .description {
+    font-size: 1.4em;
+    height: 150px;
+    line-height: 1.4;
+  }
+`
 const Vendors = () => {
   return (
     <Fragment>
       <Navigation />
-      <section>
-        <h2>JPT</h2>
-        <p>JPT is the first manufacturer of commercial Pulse width adjustable- high power fiber lasers (MOPA fiber lasers) and provider of leading photoelectric precision inspection and laser processing intelligent equipment in China.
+      <VendorSection>
+        <h2 className="header">JPT</h2>
+        <p className="description">JPT is the first manufacturer of commercial Pulse width adjustable- high power fiber lasers (MOPA fiber lasers) and provider of leading photoelectric precision inspection and laser processing intelligent equipment in China.
         Qualified supplier of ZTE, Huawei, Nokia, TE Connectivity, etc…</p>
         <CardList>
           <Card>
@@ -59,9 +74,8 @@ const Vendors = () => {
             <ImageWrapper style={{ backgroundImage: 'url("' + imgUrl4 + '")' }} />
             <h4>Passive Components (Outdoor)</h4>
           </Card>
-
         </CardList>
-      </section >
+      </VendorSection >
     </Fragment >
   )
 }
