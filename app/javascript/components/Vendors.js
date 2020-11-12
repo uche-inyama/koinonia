@@ -8,18 +8,28 @@ import {
   imgUrl10
 } from './imageUrl'
 
-const ImageWrapper = styled.div`
+const ImageWrapperFirst = styled.div`
   background-repeat: no-repeat;
   background-position: 0px;
   background-size: cover;
-  width: 300px;
-  height: 250px;
+  width: 100%;
+  height: 550px;
+`
+
+const ImageWrapper = styled.div`
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 550px;
 `
 
 const CardList = styled.ul`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
   grid-gap:5px;
+  text-align: center;
+
 `
 const Card = styled.div`
   border: solid black 1px;
@@ -34,7 +44,7 @@ const Vendors = () => {
         Qualified supplier of ZTE, Huawei, Nokia, TE Connectivity, etc…</p>
         <CardList>
           <Card>
-            <ImageWrapper style={{ backgroundImage: 'url("' + imgUrl1 + '")' }} />
+            <ImageWrapperFirst className="first" style={{ backgroundImage: 'url("' + imgUrl1 + '")' }} />
             <h4>Passive Components (Indoor)</h4>
           </Card>
           <Card>
@@ -49,30 +59,7 @@ const Vendors = () => {
             <ImageWrapper style={{ backgroundImage: 'url("' + imgUrl4 + '")' }} />
             <h4>Passive Components (Outdoor)</h4>
           </Card>
-          {/* <Card>
-            <ImageWrapper style={{ backgroundImage: 'url("' + imgUrl5 + '")' }} />
-            <h4>Passive Components (Indoor)</h4>
-          </Card>
-          <Card>
-            <ImageWrapper style={{ backgroundImage: 'url("' + imgUrl6 + '")' }} />
-            <h4>Passive Components (Outdoor)</h4>
-          </Card>
-          <Card>
-            <ImageWrapper style={{ backgroundImage: 'url("' + imgUrl7 + '")' }} />
-            <h4>Passive Components (Outdoor)</h4>
-          </Card>
-          <Card>
-            <ImageWrapper style={{ backgroundImage: 'url("' + imgUrl8 + '")' }} />
-            <h4>Passive Components (Outdoor)</h4>
-          </Card>
-          <Card>
-            <ImageWrapper style={{ backgroundImage: 'url("' + imgUrl9 + '")' }} />
-            <h4>Passive Components (Outdoor)</h4>
-          </Card>
-          <Card>
-            <ImageWrapper style={{ backgroundImage: 'url("' + imgUrl10 + '")' }} />
-            <h4>Passive Components (Outdoor)</h4>
-          </Card> */}
+
         </CardList>
       </section >
     </Fragment >
