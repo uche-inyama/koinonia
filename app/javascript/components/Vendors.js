@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import Navigation from './Navigation'
+import Navigation from './Navigation/nav'
 import styled from 'styled-components'
 import {
   imgUrl1, imgUrl2, imgUrl3,
