@@ -34,6 +34,9 @@ const StyledBurger = styled.div`
         transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
       }
     }
+    @media(min-width: 1024px){
+      display: none;
+    }
 `
 
 const Hamburger = () => {

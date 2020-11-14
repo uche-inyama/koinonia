@@ -18,6 +18,10 @@ const Nav = styled.div`
       margin-left: 10px;
     }
   }
+
+  @media(min-width: 1024px){
+
+  }
   
   `
 const Navigation = () => {

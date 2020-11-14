@@ -31,6 +31,10 @@ const Ul = styled.ul`
     }
   }
   
+  @media(min-width: 1024px){
+    display: none;
+  }
+  
 `
 
 const navRight = ({ open }) => {
