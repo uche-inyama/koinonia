@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import Navigation from './Navigation/nav'
-
 const Home = () => {
   return (
     <Fragment>
