@@ -20,11 +20,13 @@ const Footer = styled.div`
 
 const SocialMedia = styled.ul`
   display: flex;
-  justify-content: space-between;
-  padding-left: 10px;
-  width: 40%;
+  justify-content: flex-start;
+  padding-left: 40px;
+  width: 100%;
   list-style: none;
   li {
+    margin-left: 10px;
+    pdding: 5px;
     color: red;
     svg {
       font-size: 1.2em;
@@ -62,8 +64,7 @@ const SocialMediaWrapper = styled.div`
   h4 {
     padding: 10px;
     font-size: 0.9em;
-    // margin-bottom: 5px;
-    font-weight: 400;
+    font-weight: 700;
     text-transform: capitalize;
   }
 `;
@@ -72,7 +73,7 @@ const ContactWrapper = styled.div`
   h4 {
     padding: 10px;
     font-size: 0.9em;
-    font-weight: 400;
+    font-weight: 700;
     text-transform: capitalize;
   }
 `
