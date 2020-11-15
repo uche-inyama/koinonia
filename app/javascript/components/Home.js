@@ -85,14 +85,14 @@ font-family: 'Open Sans', sans-serif;
       margin-left: 20px;
       h4 {
         border-bottom: solid 2px red;
-        width: 80px;
+        width: 120px;
         padding-bottom: 5px;
         margin-bottom: 10px;
-        text-align: center;
       }
       p {
-        line-height: 1.4;
+        line-height: 1.6;
         width: 100%;
+        font-family: 'Open Sans', sans-serif;
       }
     }
     .events-image-wrapper {
