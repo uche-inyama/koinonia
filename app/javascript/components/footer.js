@@ -22,10 +22,10 @@ const SocialMedia = styled.ul`
   display: flex;
   justify-content: space-between;
   width: 40%;
+  padding-left: 0px;
   list-style: none;
   li {
     margin-left: 10px;
-    pdding: 5px;
     color: red;
     svg {
       font-size: 1.2em;
