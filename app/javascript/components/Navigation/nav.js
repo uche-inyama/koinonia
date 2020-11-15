@@ -6,6 +6,7 @@ const Nav = styled.nav`
   width: 100%;
   height: 65px;
   border-bottom: 2px solid #f1f1f1;
+  background-color: #fff;
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
@@ -15,6 +16,8 @@ const Nav = styled.nav`
 
     @media(min-width: 1024px){
       font-family: 'Open Sans', sans-serif;
+      position: fixed;
+      z-index: 20;
      .nav-items {
        display: flex;
        justify-content: space-around;

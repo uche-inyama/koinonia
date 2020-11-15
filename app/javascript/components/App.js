@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import styled from 'styled-components';
 import reset from './reset.css';
 import style from './style.css';
+import './fontawesome';
 import Home from './Home';
 import About from './About';
 import Products from './Products';
