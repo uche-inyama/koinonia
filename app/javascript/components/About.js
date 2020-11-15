@@ -34,7 +34,7 @@ const Details = styled.li`
   p:nth-child(n+2){
     margin-top: 10px;
   }
-  h3 {
+  span {
     border-bottom: solid 1px red;
     padding-bottom: 5px;
     width: 63px;
@@ -68,7 +68,7 @@ const Home = () => {
           <Ul>
             <ImageWrapper></ImageWrapper>
             <Details>
-              <h3>Meaning</h3>
+              <span>Meaning</span>
               <p>Koinonia Enterprises is an Australian company specialized in fixed line
               and Mobile Communications Networks providing turnkey solutions in
               design, deployment and integration services for high-performance

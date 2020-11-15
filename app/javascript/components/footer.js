@@ -23,6 +23,7 @@ const SocialMedia = styled.ul`
   justify-content: space-between;
   padding-left: 10px;
   width: 40%;
+  list-style: none;
   li {
     color: red;
     svg {
@@ -37,8 +38,8 @@ flex-direction: column;
 list-style: none;
 font-size: 0.9em;
   li {
-    margin-top: 15px;
-    padding: 5px 0 0 15px;
+    margin-top: 10px;
+    padding: 5px 0 0 5px;
     div {
       display: flex;
     }
@@ -59,7 +60,7 @@ font-size: 0.9em;
 const SocialMediaWrapper = styled.div`
   margin-top: 20px;
   h4 {
-    padding: 15px;
+    padding: 5px;
     margin-bottom: 5px;
     font-weight: 700;
     text-transform: capitalize;

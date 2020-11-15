@@ -22,6 +22,7 @@ const Nav = styled.nav`
      .nav-items {
        display: flex;
        justify-content: space-around;
+       list-style: none;
        width: 70%;
        padding: 0 50px;
        align-items: center;
