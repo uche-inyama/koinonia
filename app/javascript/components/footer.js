@@ -20,9 +20,8 @@ const Footer = styled.div`
 
 const SocialMedia = styled.ul`
   display: flex;
-  justify-content: flex-start;
-  padding-left: 40px;
-  width: 100%;
+  justify-content: space-between;
+  width: 40%;
   list-style: none;
   li {
     margin-left: 10px;
@@ -39,7 +38,7 @@ display: flex;
 flex-direction: column;
 list-style: none;
 font-size: 0.9em;
-padding-left: 5px;
+padding-left: 10px;
   li {
     margin-top: 2px;
     div {
@@ -56,7 +55,7 @@ padding-left: 5px;
 `;
 
 const SocialMediaWrapper = styled.div`
-  h4 {
+  h3 {
     padding: 10px;
     font-size: 0.9em;
     font-weight: 700;
@@ -65,7 +64,7 @@ const SocialMediaWrapper = styled.div`
 `;
 
 const ContactWrapper = styled.div`
-  h4 {
+  h3 {
     padding: 10px;
     font-size: 0.9em;
     font-weight: 700;
@@ -78,7 +77,7 @@ const footer = () => {
     <Footer>
       <div>
         <ContactWrapper>
-          <h4>egypt office</h4>
+          <h3>egypt office</h3>
           <Contact>
             <li>
               <div>
@@ -100,7 +99,7 @@ const footer = () => {
           </Contact>
         </ContactWrapper>
         <SocialMediaWrapper>
-          <h4>Follow Us</h4>
+          <h3>Follow Us</h3>
           <SocialMedia>
             <li><FontAwesomeIcon icon={['fab', 'facebook-f']} /></li>
             <li><FontAwesomeIcon icon={['fab', 'linkedin-in']} /></li>
@@ -111,7 +110,7 @@ const footer = () => {
       <div></div>
       <div>
         <ContactWrapper>
-          <h4>Australia Office</h4>
+          <h3>Australia Office</h3>
           <Contact>
             <li>
               <div>
@@ -133,7 +132,7 @@ const footer = () => {
           </Contact>
         </ContactWrapper>
         <SocialMediaWrapper>
-          <h4>Follow Us</h4>
+          <h3>Follow Us</h3>
           <SocialMedia>
             <li><FontAwesomeIcon icon={['fab', 'facebook-f']} /></li>
             <li><FontAwesomeIcon icon={['fab', 'linkedin-in']} /></li>
