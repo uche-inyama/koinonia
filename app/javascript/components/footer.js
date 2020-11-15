@@ -100,6 +100,14 @@ const footer = () => {
             </li>
           </Contact>
         </ContactWrapper>
+        <SocialMediaWrapper>
+          <h4>Follow Us</h4>
+          <SocialMedia>
+            <li><FontAwesomeIcon icon={['fab', 'facebook-f']} /></li>
+            <li><FontAwesomeIcon icon={['fab', 'linkedin-in']} /></li>
+            <li><FontAwesomeIcon icon={['fab', 'youtube']} /></li>
+          </SocialMedia>
+        </SocialMediaWrapper>
       </div>
       <div></div>
       <div>
