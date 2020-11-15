@@ -8,7 +8,7 @@ const Footer = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 300px;
   grid-gap: 20px;
-  margin-top: 30px;
+  margin-top: 20px;
   padding: 40px;
   div {
     background-color: #b3b3ad;
@@ -39,6 +39,12 @@ font-size: 0.9em;
   li {
     margin-top: 15px;
     padding: 5px 0 0 15px;
+    div {
+      display: flex;
+    }
+    p {
+      margin-left: 10px;
+    }
     svg {
       color: red;
       font-size: 1.2em;
@@ -75,9 +81,23 @@ const footer = () => {
         <ContactWrapper>
           <h4>egypt office</h4>
           <Contact>
-            <li><FontAwesomeIcon icon={['fas', 'map-marker-alt']} /><span>12 Dr. Mazhar Ashour, El Nozha Cairo, Egypt</span></li>
-            <li><FontAwesomeIcon icon={['fas', 'phone-square-alt']} /><span>20226226760 - 201118199932 - 201060900959 </span></li>
-            <li><FontAwesomeIcon icon={['fas', 'envelope']} /><span>sales@koinonia-egypt.com</span></li>
+            <li>
+              <div>
+                <FontAwesomeIcon icon={['fas', 'map-marker-alt']} />
+                <p>12 Dr. Mazhar Ashour, El Nozha Cairo,<br /> Egypt.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <FontAwesomeIcon icon={['fas', 'phone-square-alt']} />
+                <p>20226226760 - 201118199932 - <br />201060900959 </p>
+              </div>
+            </li> <li>
+              <div>
+                <FontAwesomeIcon icon={['fas', 'envelope']} />
+                <p>sales@koinonia-egypt.com</p>
+              </div>
+            </li>
           </Contact>
         </ContactWrapper>
         <SocialMediaWrapper>
@@ -94,9 +114,23 @@ const footer = () => {
         <ContactWrapper>
           <h4>Australia Office</h4>
           <Contact>
-            <li><FontAwesomeIcon icon={['fas', 'map-marker-alt']} /><span>36/65 Marigold st, Revesby, NSW 2212, Australia</span></li>
-            <li><FontAwesomeIcon icon={['fas', 'phone-square-alt']} /><span>6102 8003 3339</span></li>
-            <li><FontAwesomeIcon icon={['fas', 'envelope']} /><span>sales@koinoniaenterprises.com.au</span></li>
+            <li>
+              <div>
+                <FontAwesomeIcon icon={['fas', 'map-marker-alt']} />
+                <p>36/65 Marigold st, Revesby, NSW 2212,<br /> Australia. </p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <FontAwesomeIcon icon={['fas', 'phone-square-alt']} />
+                <p>6102 8003 3339</p>
+              </div>
+            </li> <li>
+              <div>
+                <FontAwesomeIcon icon={['fas', 'envelope']} />
+                <p>sales@koinoniaenterprises.com.au</p>
+              </div>
+            </li>
           </Contact>
         </ContactWrapper>
         <SocialMediaWrapper>

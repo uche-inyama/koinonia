@@ -1,13 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import Hamburger from './Hamburger'
+import { logoUrl } from '../imageUrl'
 
 const Nav = styled.nav`
   width: 100%;
   height: 65px;
   border-bottom: 2px solid #f1f1f1;
   background-color: #fff;
-  padding: 0 20px;
+  padding: 0 50px;
   display: flex;
   justify-content: space-between;
     .logo {
@@ -29,7 +30,11 @@ const Nav = styled.nav`
        }
      }
      .logo {
-       padding-left: 50px;
+       background-repeat: no-repeat;
+       background-position: center;
+       background-size: cover;
+       width: 100px;
+       height: auto;
      }
     }
 `
@@ -38,7 +43,7 @@ const Nav = styled.nav`
 const nav = () => {
   return (
     <Nav>
-      <div className="logo">logo</div>
+      <div className="logo" style={{ backgroundImage: 'url("' + logoUrl + '")' }}></div>
       <ul className="nav-items">
         <li>Home</li>
         <li>About Us</li>

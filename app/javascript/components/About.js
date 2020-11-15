@@ -34,6 +34,11 @@ const Details = styled.li`
   p:nth-child(n+2){
     margin-top: 10px;
   }
+  h3 {
+    border-bottom: solid 1px red;
+    padding-bottom: 5px;
+    width: 12%;
+  }
   .vision {
     border: red 1px solid;
     border-top-left-radius: 20px;
@@ -45,10 +50,11 @@ const Details = styled.li`
     span {
       padding: 15px 0 10px 0px;
       border-bottom: 1px solid red;
-      margin-bottom: 10px;
-      height: 40px;
-      width: 100px;
       display: block;
+      margin-bottom: 5px;
+      height: 40px;
+      text-transform: capitalize;
+      width: 15%;
     }
   }
 `;
@@ -62,6 +68,7 @@ const Home = () => {
           <Ul>
             <ImageWrapper></ImageWrapper>
             <Details>
+              <h3>Meaning</h3>
               <p>Koinonia Enterprises is an Australian company specialized in fixed line
               and Mobile Communications Networks providing turnkey solutions in
               design, deployment and integration services for high-performance

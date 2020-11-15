@@ -8,7 +8,7 @@ export const imgUrl7 = 'https://koinoniamaya.s3.us-east-2.amazonaws.com/datacent
 export const imgUrl8 = 'https://koinoniamaya.s3.us-east-2.amazonaws.com/cablingSystem.png';
 export const imgUrl9 = 'https://koinoniamaya.s3.us-east-2.amazonaws.com/dropCable.png';
 export const imgUrl10 = 'https://koinoniamaya.s3.us-east-2.amazonaws.com/multicore.png';
-
+export const logoUrl = 'https://koinoniamaya.s3.us-east-2.amazonaws.com/logo.png';
 
 {/* <Card>
             <ImageWrapper style={{ backgroundImage: 'url("' + imgUrl5 + '")' }} />
