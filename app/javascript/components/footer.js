@@ -56,7 +56,6 @@ font-size: 0.9em;
 `;
 
 const SocialMediaWrapper = styled.div`
-  margin-top: 20px;
   h4 {
     padding: 10px;
     font-size: 0.9em;
