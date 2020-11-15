@@ -38,8 +38,8 @@ flex-direction: column;
 list-style: none;
 font-size: 0.9em;
   li {
-    margin-top: 10px;
-    padding: 5px 0 0 5px;
+    margin-top: 2px;
+    padding: 2px 0 0 2px;
     div {
       display: flex;
     }
@@ -50,27 +50,29 @@ font-size: 0.9em;
       color: red;
       font-size: 1.2em;
     }
-    span {
-      display: inline-block;
-      padding-left: 20px;
-    }
+    // span {
+    //   display: inline-block;
+    //   padding-left: 20px;
+    // }
   }
 `;
 
 const SocialMediaWrapper = styled.div`
   margin-top: 20px;
   h4 {
-    padding: 5px;
-    margin-bottom: 5px;
-    font-weight: 700;
+    padding: 10px;
+    font-size: 0.9em;
+    // margin-bottom: 5px;
+    font-weight: 400;
     text-transform: capitalize;
   }
 `;
 
 const ContactWrapper = styled.div`
   h4 {
-    padding: 15px;
-    font-weight: 700;
+    padding: 10px;
+    font-size: 0.9em;
+    font-weight: 400;
     text-transform: capitalize;
   }
 `
