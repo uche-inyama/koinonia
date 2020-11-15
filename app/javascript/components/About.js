@@ -37,7 +37,7 @@ const Details = styled.li`
   h3 {
     border-bottom: solid 1px red;
     padding-bottom: 5px;
-    width: 12%;
+    width: 63px;
   }
   .vision {
     border: red 1px solid;
@@ -54,7 +54,7 @@ const Details = styled.li`
       margin-bottom: 5px;
       height: 40px;
       text-transform: capitalize;
-      width: 15%;
+      width: 75px;
     }
   }
 `;
