@@ -14,7 +14,6 @@ height: 250vh;
 `;
 const HeroSection = styled.div`
   height: 908px;
-  // width: 100%;
   background-color:  #7b7d79;
   margin-bottom: 30px;
   padding: 0px;
@@ -96,8 +95,8 @@ font-family: 'Open Sans', sans-serif;
       }
     }
     .events-image-wrapper {
-      border: solid 1px black;
       border-radius: 10px;
+      box-shadow: 0 0 18px 0  #7f8cff, 0 0 15px -5px #505f79;
       margin-left: 20px;
       display: flex;
       align-items: center;
