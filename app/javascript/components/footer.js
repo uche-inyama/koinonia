@@ -10,8 +10,9 @@ const Footer = styled.div`
   grid-gap: 20px;
   margin-top: 20px;
   padding: 40px;
-  div {
-    background-color: #b3b3ad;
+  .footer-wrapper {
+    box-shadow: 0 0 18px 0  #7f8cff, 0 0 15px -5px #505f79;
+    border-radius: 5px;
     li {
       font-size: 1em;
     }
@@ -75,7 +76,7 @@ const ContactWrapper = styled.div`
 const footer = () => {
   return (
     <Footer>
-      <div>
+      <div className='footer-wrapper'>
         <ContactWrapper>
           <h3>egypt office</h3>
           <Contact>
@@ -107,8 +108,8 @@ const footer = () => {
           </SocialMedia>
         </SocialMediaWrapper>
       </div>
-      <div></div>
-      <div>
+      <div className='footer-wrapper'></div>
+      <div className='footer-wrapper'>
         <ContactWrapper>
           <h3>Australia Office</h3>
           <Contact>
