@@ -9,7 +9,8 @@ export const imgUrl8 = 'https://koinoniamaya.s3.us-east-2.amazonaws.com/cablingS
 export const imgUrl9 = 'https://koinoniamaya.s3.us-east-2.amazonaws.com/dropCable.png';
 export const imgUrl10 = 'https://koinoniamaya.s3.us-east-2.amazonaws.com/multicore.png';
 export const logoUrl = 'https://koinoniamaya.s3.us-east-2.amazonaws.com/logo.png';
-
+export const heroUrl = 'https://koinoniamaya.s3.us-east-2.amazonaws.com/telecommunication-mast-tv-antennas-wireless-technology.png';
+export const advert = 'https://koinoniamaya.s3.us-east-2.amazonaws.com/hallway-with-row-servers.png'
 {/* <Card>
             <ImageWrapper style={{ backgroundImage: 'url("' + imgUrl5 + '")' }} />
             <h4>Passive Components (Indoor)</h4>
