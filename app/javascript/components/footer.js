@@ -39,9 +39,9 @@ display: flex;
 flex-direction: column;
 list-style: none;
 font-size: 0.9em;
+padding-left: 5px;
   li {
     margin-top: 2px;
-    padding: 2px 0 0 2px;
     div {
       display: flex;
     }
@@ -83,13 +83,13 @@ const footer = () => {
             <li>
               <div>
                 <FontAwesomeIcon icon={['fas', 'map-marker-alt']} />
-                <p>12 Dr. Mazhar Ashour, El Nozha Cairo,<br /> Egypt.</p>
+                <p>12 Dr. Mazhar Ashour, El Nozha Cairo, Egypt.</p>
               </div>
             </li>
             <li>
               <div>
                 <FontAwesomeIcon icon={['fas', 'phone-square-alt']} />
-                <p>20226226760 - 201118199932 - <br />201060900959 </p>
+                <p>20226226760 - 201118199932 - 201060900959 </p>
               </div>
             </li> <li>
               <div>
