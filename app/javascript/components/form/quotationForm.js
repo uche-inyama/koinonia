@@ -12,6 +12,7 @@ align-items: center;
 font-family: 'Open Sans', sans-serif;
 ul {
   list-style:none;
+  padding-left: 0px;
 }
 form {
   display: none;
