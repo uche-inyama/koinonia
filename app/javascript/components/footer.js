@@ -11,7 +11,7 @@ const Footer = styled.div`
   margin-top: 20px;
   padding: 40px;
   .footer-wrapper {
-    box-shadow: 0 0 18px 0  #7f8cff, 0 0 15px -5px #505f79;
+    box-shadow: 0 0 10px 0  grey, 0 0 15px -5px #505f79;
     border-radius: 5px;
     li {
       font-size: 1em;
@@ -108,7 +108,7 @@ const footer = () => {
           </SocialMedia>
         </SocialMediaWrapper>
       </div>
-      <div className='footer-wrapper'></div>
+      <div className='footer-wrapper map'></div>
       <div className='footer-wrapper'>
         <ContactWrapper>
           <h3>Australia Office</h3>
