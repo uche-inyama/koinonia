@@ -3,6 +3,13 @@ import styled from 'styled-components'
 import Navigation from './Navigation/nav'
 import Footer from './footer'
 
+
+const AboutWrapper = styled.div`
+.sc-hKgILt  {
+  position: relative;
+  top: 50px;
+}
+`;
 const Main = styled.main`
   position: relative;
   z-index: 10;
@@ -63,7 +70,7 @@ const Details = styled.li`
 
 const About = () => {
   return (
-    <Fragment>
+    <AboutWrapper>
       <Navigation />
       <main>
         <HeroSection>
@@ -109,7 +116,7 @@ const About = () => {
         </HeroSection>
       </main>
       <Footer />
-    </Fragment>
+    </AboutWrapper>
   )
 }
 export default About;
