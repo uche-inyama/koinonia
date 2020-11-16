@@ -5,8 +5,10 @@ import style from './style.css';
 import './fontawesome';
 import Home from './Home';
 import About from './About';
-import Products from './Products';
-import Vendors from './Vendors';
+import Partners from './Partners';
+import Clients from './Clients';
+import Services from './Services';
+import News from './News'
 import Contact from './Contact';
 
 const App = () => {
@@ -18,7 +20,7 @@ const App = () => {
       <Route excat path="/partners" component={Partners}></Route>
       <Route excat path="/clients" component={Clients}></Route>
       <Route excat path="/services" component={Services}></Route>
-      <Route excat path="/clients" component={News}></Route>
+      <Route excat path="/news" component={News}></Route>
       <Route excat path="/" component={Home}></Route>
     </Switch>
   )

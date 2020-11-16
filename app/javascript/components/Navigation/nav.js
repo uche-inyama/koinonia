@@ -50,12 +50,12 @@ const nav = () => {
       <ul className="nav-items">
         <Link to={'/'}>Home</Link>
         <Link to={'/about'}>About Us</Link>
-        <li>Our Partners</li>
-        <li>Clients</li>
-        <li>Services</li>
-        <li>News</li>
+        <Link to={'/partners'}>Our Partners</Link>
+        <Link to={'/clients'}>Clients</Link>
+        <Link to={'/services'}>Services</Link>
+        <Link to={'/news'}>News</Link>
         <Link to={'/contact'}>Contact Us</Link>
-        <li>search</li>
+        <Link to={'#'}>search</Link>
       </ul>
       <Hamburger />
     </Nav>
