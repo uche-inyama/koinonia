@@ -33,7 +33,7 @@ const HeroSection = styled.div`
   }
   .button {
     padding: 10px 20px 10px 20px;
-    border: solid 0.8px red;
+    // border: solid 0.8px red;
     border-radius: 5px;
     background-color: #f7dcdc;
     color: red;
@@ -55,8 +55,8 @@ const HeroSection = styled.div`
 
 
 const OurEvents = styled.div`
-justify-content: space-between;
-padding: 20px 20px 20px 100px;
+justify-content: space-around;
+// padding: 20px 20px 20px 100px;
 height: 1000px;
 font-family: 'Open Sans', sans-serif;
 .event-title {
@@ -76,7 +76,7 @@ font-family: 'Open Sans', sans-serif;
 }
   .event-one {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     height: 400px;
     margin-bottom: 20px;
     .event-details{

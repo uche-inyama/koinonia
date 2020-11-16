@@ -27,8 +27,9 @@ const Nav = styled.nav`
        width: 70%;
        padding: 0 10px;
        align-items: center;
-       li {
+       a {
          color: #8c8c88;
+         text-decoration: none;
        }
      }
      .logo {
@@ -50,7 +51,7 @@ const nav = () => {
         <Link to={'/'}>Home</Link>
         <Link to={'/about'}>About Us</Link>
         <li>Our Partners</li>
-        <li>CLients</li>
+        <li>Clients</li>
         <li>Services</li>
         <li>News</li>
         <Link to={'/contact'}>Contact Us</Link>
