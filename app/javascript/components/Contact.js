@@ -6,7 +6,7 @@ import { contactImage } from './imageUrl'
 import Footer from './footer'
 
 const ContactWrapper = styled.div`
-  .sc-hKgILt.gbjFnV {
+  .sc-hKgILt  {
     position: relative;
     top: 150px;
   }
