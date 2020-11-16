@@ -13,6 +13,7 @@ const Contactform = styled.div`
     flex-direction: column;
     height: 320px;
     list-style: none;
+    padding-left: 0px;
   }
   .field.submit{
     position: relative;

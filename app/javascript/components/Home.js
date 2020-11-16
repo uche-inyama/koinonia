@@ -56,7 +56,6 @@ const HeroSection = styled.div`
 
 const OurEvents = styled.div`
 justify-content: space-around;
-// padding: 20px 20px 20px 100px;
 height: 1000px;
 font-family: 'Open Sans', sans-serif;
 .event-title {
