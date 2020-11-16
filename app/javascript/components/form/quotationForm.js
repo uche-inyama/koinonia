@@ -10,6 +10,9 @@ display: flex;
 justify-content: center;
 align-items: center;
 font-family: 'Open Sans', sans-serif;
+ul {
+  list-style:none;
+}
 form {
   display: none;
   padding: 10px;
