@@ -23,11 +23,13 @@ const Ul = styled.ul`
   margin-top: 100px;
 `;
 const ImageWrapper = styled.li`
-  border: solid 1px black;
-  background-color: gray;
   border-radius: 20px;
   position: relative;
   z-index: 1;
+  img {
+    width: 600px;
+    height: 450px;
+  }
 `;
 
 const Details = styled.li`
@@ -59,14 +61,16 @@ const Details = styled.li`
   }
 `;
 
-const Home = () => {
+const About = () => {
   return (
     <Fragment>
       <Navigation />
       <main>
         <HeroSection>
           <Ul>
-            <ImageWrapper></ImageWrapper>
+            <ImageWrapper>
+              <img src="https://koinoniamaya.s3.us-east-2.amazonaws.com/network-digital-hologram-internet-things-city-background-5g-network-wireless-systems.png" alt="" />
+            </ImageWrapper>
             <Details>
               <span>Meaning</span>
               <p>Koinonia Enterprises is an Australian company specialized in fixed line
@@ -98,7 +102,9 @@ const Home = () => {
                 project management in all work phases.
               </p>
             </Details>
-            <ImageWrapper></ImageWrapper>
+            <ImageWrapper>
+              <img src="https://koinoniamaya.s3.us-east-2.amazonaws.com/5g-communication-technology-internet-network.png" alt="" />
+            </ImageWrapper>
           </Ul>
         </HeroSection>
       </main>
@@ -106,4 +112,4 @@ const Home = () => {
     </Fragment>
   )
 }
-export default Home;
+export default About;

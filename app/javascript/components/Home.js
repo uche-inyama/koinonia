@@ -4,6 +4,7 @@ import Navigation from './Navigation/nav'
 import Footer from './footer'
 import { heroUrl } from './imageUrl'
 import { advert } from './imageUrl'
+import QuotationForm from './form/quotationForm'
 
 
 const Main = styled.main`
@@ -36,6 +37,7 @@ const HeroSection = styled.div`
     border-radius: 5px;
     background-color: #f7dcdc;
     color: red;
+    cursor: pointer;
     font-size: 0.9em;
     wdith: 150px;
     top: 220px;
@@ -49,7 +51,8 @@ const HeroSection = styled.div`
     font-weight: 700;
   }
  
-`;
+`; <label>comment</label>
+
 
 const OurEvents = styled.div`
 justify-content: space-between;
@@ -103,7 +106,8 @@ font-family: 'Open Sans', sans-serif;
       justify-content: center;
       width: 400px;
       height: 400px;
-    }
+    }              <label>comment</label>
+
   }
 `;
 
@@ -156,15 +160,22 @@ const Advert = styled.div`
   }
 `
 
-const About = () => {
+const Home = () => {
+
+  const handleSubmit = () => {
+    const form = document.querySelector('form');
+    form.style.display = 'block'
+    console.log('submit a quote')
+  }
   return (
     <div>
       <Navigation />
       <Main>
         <HeroSection>
+          <QuotationForm />
           <div className="image-wrapper" style={{ backgroundImage: 'url("' + heroUrl + '")' }}>
             <h3>It's all about Networks</h3>
-            <div className="button">Request a Quote</div>
+            <div className="button" onClick={handleSubmit}>Request a Quote</div>
           </div>
         </HeroSection>
         <OurEvents>
@@ -214,4 +225,4 @@ const About = () => {
     </div>
   )
 }
-export default About;
+export default Home;

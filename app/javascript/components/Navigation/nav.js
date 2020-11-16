@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import Hamburger from './Hamburger'
 import { logoUrl } from '../imageUrl'
 
@@ -24,7 +25,7 @@ const Nav = styled.nav`
        justify-content: space-around;
        list-style: none;
        width: 70%;
-       padding: 0 50px;
+       padding: 0 10px;
        align-items: center;
        li {
          color: #8c8c88;
@@ -46,13 +47,13 @@ const nav = () => {
     <Nav>
       <div className="logo" style={{ backgroundImage: 'url("' + logoUrl + '")' }}></div>
       <ul className="nav-items">
-        <li>Home</li>
-        <li>About Us</li>
+        <Link to={'/'}>Home</Link>
+        <Link to={'/about'}>About Us</Link>
         <li>Our Partners</li>
-        <li>Clients</li>
+        <li>CLients</li>
         <li>Services</li>
         <li>News</li>
-        <li>Contact Us</li>
+        <Link to={'/contact'}>Contact Us</Link>
         <li>search</li>
       </ul>
       <Hamburger />
