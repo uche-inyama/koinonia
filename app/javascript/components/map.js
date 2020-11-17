@@ -1,15 +1,17 @@
-import React from 'react'
-import { GoogleMap, withScriptjs, withGoogleMap } from 'react-google-maps'
+import React, { useState, useEffect } from 'react'
+import { GoogleMap, withScriptjs, withGoogleMap, Marker } from 'react-google-maps'
 
 const REACT_APP_GOOGLE_KEY = "AIzaSyDwUGUwqFUMioA43bUnTj5qi3rgTRVOzyk"
 
-const Map = () => {
+const Map = (props) => {
   return (
     <div>
       <GoogleMap
         defaultZoom={10}
         defaultCenter={{ lat: -33.935110, lng: 150.998200 }}
-      />
+      >
+        {props.isMarkerShown && <Marker position={{ lat: -33.935110, lng: 150.998200 }} />}
+      </GoogleMap>
     </div>
   );
 }
@@ -17,6 +19,18 @@ const Map = () => {
 const WrappedMap = withScriptjs(withGoogleMap(Map));
 
 const MyMap = () => {
+  const [isMarkerShown, setMarker] = useState(false);
+
+  useEffect(() => {
+    delayedShownMarker()
+  });
+
+  const delayedShownMarker = () => {
+    setTimeout(() => {
+      setMarker(true)
+    }, 3000)
+  }
+
   return (
     <div style={{ width: "100%", height: "100%" }}>
       <WrappedMap
@@ -25,6 +39,7 @@ const MyMap = () => {
         loadingElement={<div style={{ height: `100%` }} />}
         containerElement={<div style={{ height: `400px` }} />}
         mapElement={<div style={{ height: `100%` }} />}
+        isMarkerShown={isMarkerShown}
       />
     </div>
   )
