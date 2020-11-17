@@ -19,6 +19,7 @@ const HeroSection = styled.div`
   margin-bottom: 30px;
   padding: 0px;
   .image-wrapper {
+    background-image: url(${heroUrl});
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -51,7 +52,7 @@ const HeroSection = styled.div`
     font-weight: 700;
   }
  
-`; <label>comment</label>
+`;
 
 
 const OurEvents = styled.div`
@@ -175,7 +176,7 @@ const Home = () => {
       <Main>
         <HeroSection>
           <QuotationForm />
-          <div className="image-wrapper" style={{ backgroundImage: 'url("' + heroUrl + '")' }}>
+          <div className="image-wrapper">
             <h3>It's all about Networks</h3>
             <div className="button" onClick={handleSubmit}>Request a Quote</div>
           </div>

@@ -89,7 +89,7 @@ const footer = () => {
             <li>
               <div>
                 <FontAwesomeIcon icon={['fas', 'phone-square-alt']} />
-                <p>20226226760 - 201118199932 - 201060900959 </p>
+                <p>+20226226760 - +201118199932 - +201060900959 </p>
               </div>
             </li> <li>
               <div>
@@ -122,7 +122,7 @@ const footer = () => {
             <li>
               <div>
                 <FontAwesomeIcon icon={['fas', 'phone-square-alt']} />
-                <p>6102 8003 3339</p>
+                <p>+6102 8003 3339</p>
               </div>
             </li> <li>
               <div>
