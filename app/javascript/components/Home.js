@@ -219,7 +219,7 @@ const Home = () => {
             <div className="square">
               <h2>The Best from around the world</h2>
               <div className="line"><span className="a"></span> <span className="b"></span></div>
-              <p>We believe that our customers deserve the best, so koinomis brings you the best from the world</p>
+              <p>We believe that our customers deserve the best, so koinonia brings you the best from the world</p>
             </div>
           </div>
         </Advert>
