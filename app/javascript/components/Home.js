@@ -118,6 +118,9 @@ const Advert = styled.div`
     background-size: cover;
     width: 100%;
     height: 100%;
+    background-image: 
+    linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 94%,rgba(0,0,0,0.65) 99%,rgba(0,0,0,0) 100%),
+    url(${advert});
     .square {
       color: #fff;
       display: flex;
@@ -211,7 +214,7 @@ const Home = () => {
           </div>
         </OurEvents>
         <Advert>
-          <div className="advert-image-wrapper" style={{ backgroundImage: 'url("' + advert + '")' }}>
+          <div className="advert-image-wrapper">
             <div className="square">
               <h2>The Best from around the world</h2>
               <div className="line"><span className="a"></span> <span className="b"></span></div>
