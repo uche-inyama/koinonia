@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Map from './map'
+
 
 const Footer = styled.div`
   display: grid;
@@ -108,7 +110,9 @@ const footer = () => {
           </SocialMedia>
         </SocialMediaWrapper>
       </div>
-      <div className='footer-wrapper map'></div>
+      <div className='footer-wrapper map'>
+        <Map />
+      </div>
       <div className='footer-wrapper'>
         <ContactWrapper>
           <h3>Australia Office</h3>

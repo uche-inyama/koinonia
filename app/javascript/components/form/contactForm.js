@@ -62,7 +62,6 @@ const contactForm = () => {
   }
 
   const handleChange = (e) => {
-    e.preventDefault();
     setContact(Object.assign({}, contact, { [e.target.name]: e.target.value }));
     console.log('contact:', contact)
   }

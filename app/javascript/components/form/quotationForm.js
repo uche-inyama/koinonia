@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import axios from 'axios'
+
 
 const Quotation = styled.div`
 position: absolute;
@@ -46,42 +48,51 @@ form {
 `;
 const quotationForm = () => {
 
+  const [quotation, setQuotation] = useState({});
+
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    console.log('quote submitted');
+    axios.post('/api/v1/quotations', { quotation })
+      .catch(err => err)
   }
+
+  const handleChange = (e) => {
+    setQuotation(Object.assign({}, quotation, { [e.target.name]: e.target.value }));
+  }
+
   return (
     <Quotation>
       <form onSubmit={handleFormSubmit}>
         <ul className="form-items-wrapper">
           <li className="name-mobile">
             <div className="field">
-              <input type="text" name="first_name:" placeholder="First name" />
+              <input type="text" name="first_name" onChange={handleChange} placeholder="First name" />
             </div>
           </li>
           <li>
             <div className="field space">
-              <input type="text" name="last_name" placeholder="Last name" />
+              <input type="text" name="last_name" onChange={handleChange} placeholder="Last name" />
             </div>
           </li>
           <li>
             <div className="field">
-              <input type="text" name="phone" placeholder="Phone" />
+              <input type="text" name="phone" onChange={handleChange} placeholder="Phone" />
             </div>
           </li>
           <li>
             <div className="field">
-              <input type="text" name="email" placeholder="Email" />
+              <input type="text" name="email" onChange={handleChange} placeholder="Email" />
             </div>
           </li>
           <li>
             <div className="field">
-              <input type="text" name="product_list" placeholder="Product list" />
+              <input type="text" name="product_list" onChange={handleChange} placeholder="Product list" />
             </div>
           </li>
           <li>
             <div className="field">
-              <textarea type="text" name="comment" rows="5" cols="30" placeholder="Comment" />
+              <textarea type="text" name="comment" onChange={handleChange} rows="5" cols="30" placeholder="Comment" />
             </div>
           </li>
           <li>
