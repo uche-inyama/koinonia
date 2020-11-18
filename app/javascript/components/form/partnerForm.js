@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { connect } from 'react-redux'
 import ReactS3 from 'react-s3'
 import { aws } from '../keys'
-
+import { receiveNewPartner } from '../../action'
 
 const PartnerFormWrapper = styled.div`
   position: relative;
@@ -16,23 +17,25 @@ const config = {
   secretAccessKey: aws.AWSSecretKey,
 }
 
-const partnerForm = () => {
-  const [partner, setPartner] = useState({})
+const partnerForm = ({ onSubmitClick }) => {
+  const [newPartner, setNewPartner] = useState({})
 
   const handleFormSubmit = (e) => {
-    console.log(e)
+    e.preventDefault()
+    onSubmitClick(newPartner)
+    setNewPartner({})
   }
 
   const handleUpload = (e) => {
     ReactS3.uploadFile(e.target.files[0], config)
       .then((data) => {
-        setPartner(Object.assign({}, partner, { [e.target.name]: data.location }));
+        setNewPartner(Object.assign({}, newPartner, { [e.target.name]: data.location }));
       })
       .catch(err => err)
   }
 
   const handleChange = (e) => {
-    setPartner(Object.assign({}, partner, { [e.target.name]: e.target.value }));
+    setNewPartner(Object.assign({}, newPartner, { [e.target.name]: e.target.value }));
   }
 
   return (
@@ -46,9 +49,19 @@ const partnerForm = () => {
           <label>Logo</label>
           <input type="file" name="logo_url" onChange={handleUpload} />
         </div>
+        <div className="field">
+          <input type="hidden" name="slug" onChange={handleChange} />
+        </div>
         <input type="submit" />
       </form>
     </PartnerFormWrapper>
   )
 }
-export default partnerForm;
+
+const mapDispatchToProps = (dispatch) => ({
+  onSubmitClick: (newPartner) => {
+    dispatch(receiveNewPartner(newPartner))
+  },
+});
+
+export default connect(null, mapDispatchToProps)(partnerForm);

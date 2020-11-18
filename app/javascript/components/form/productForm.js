@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import axios from 'axios'
 import ReactS3 from 'react-s3'
 import { aws } from '../keys'
 
@@ -31,10 +32,9 @@ const productForm = () => {
     setProduct(Object.assign({}, product, { [e.target.name]: e.target.value }));
   }
 
-
   return (
     <ProductFormWrapper >
-      <form >
+      <form>
         <div className="field">
           <label>Product's name</label>
           <input type="text" name="name" onChange={handleChange} />
