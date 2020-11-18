@@ -24,8 +24,8 @@ export const requestPartners = (data) => ({
 
 
 export const requestProducts = (data) => ({
-  type: REQUEST_PARTNERS,
-  partners: data
+  type: REQUEST_PRODUCTS,
+  products: data
 })
 
 

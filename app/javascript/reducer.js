@@ -11,7 +11,7 @@ const Partners = (state = [], action) => {
     case RECEIVE_NEW_PARTNER:
       return [...state, action.post]
     case REQUEST_PARTNERS:
-      return action.partners
+      return [...state, action.partners]
     default:
       return state
   }
@@ -22,7 +22,7 @@ const Products = (state = [], action) => {
     case RECEIVE_NEW_PRODUCT:
       return [...state, action.post]
     case REQUEST_PRODUCTS:
-      return action.products
+      return [...state, ...action.products]
     default:
       return state
   }
