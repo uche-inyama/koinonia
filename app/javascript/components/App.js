@@ -5,7 +5,7 @@ import style from './style.css';
 import './fontawesome';
 import Home from './Home';
 import About from './About';
-import Partners from './Partners';
+import Viavi from './Viavi';
 import Clients from './Clients';
 import Services from './Services';
 import News from './News'
@@ -17,7 +17,7 @@ const App = () => {
     <Switch>
       <Route excat path="/about" component={About}></Route>
       <Route excat path="/contact" component={Contact}></Route>
-      <Route excat path="/partners" component={Partners}></Route>
+      <Route excat path="/partners/viavi" component={Viavi}></Route>
       <Route excat path="/clients" component={Clients}></Route>
       <Route excat path="/services" component={Services}></Route>
       <Route excat path="/news" component={News}></Route>

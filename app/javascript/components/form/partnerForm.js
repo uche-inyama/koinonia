@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { connect } from 'react-redux'
 import ReactS3 from 'react-s3'
 import { aws } from '../keys'
-import { receiveNewPartner } from '../../action'
+import { receiveNewPartner, removePartner } from '../../action'
 
 const PartnerFormWrapper = styled.div`
   position: relative;
@@ -17,7 +17,7 @@ const config = {
   secretAccessKey: aws.AWSSecretKey,
 }
 
-const partnerForm = ({ onSubmitClick }) => {
+const partnerForm = ({ onSubmitClick, deleteClick }) => {
   const [newPartner, setNewPartner] = useState({})
 
   const handleFormSubmit = (e) => {
@@ -61,7 +61,7 @@ const partnerForm = ({ onSubmitClick }) => {
 const mapDispatchToProps = (dispatch) => ({
   onSubmitClick: (newPartner) => {
     dispatch(receiveNewPartner(newPartner))
-  },
+  }
 });
 
 export default connect(null, mapDispatchToProps)(partnerForm);

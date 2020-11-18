@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { connect } from 'react-redux'
 import styled from 'styled-components'
 
 const Contactform = styled.div`
@@ -66,9 +67,17 @@ const contactForm = () => {
     console.log('contact:', contact)
   }
 
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault()
+    onSubmitClick(newPartner)
+    setNewPartner({})
+  }
+
+
   return (
     <Contactform>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleFormSubmit}>
         <ul className="form-items-wrapper">
           <li className="name-mobile">
             <div className="field">
@@ -103,4 +112,10 @@ const contactForm = () => {
   );
 }
 
-export default contactForm
+const mapDispatchToProps = (dispatch) => ({
+  onSubmitClick: (newPartner) => {
+    dispatch(receiveNewPartner(newPartner))
+  },
+});
+
+export default connect(null, mapDispatchToProps)(contactForm)

@@ -29,7 +29,7 @@ const Nav = styled.nav`
        align-items: center;
        a {
          color: #8c8c88;
-         text-decoration: none;
+         text-decoration: none;  
        }
      }
      .logo {
@@ -50,7 +50,10 @@ const nav = () => {
       <ul className="nav-items">
         <Link to={'/'}>Home</Link>
         <Link to={'/about'}>About Us</Link>
-        <Link to={'/partners'}>Our Partners</Link>
+        <Link to={'/partners/viavi'}>Viavi
+            <ul className="drop-down">
+          </ul>
+        </Link>
         <Link to={'/clients'}>Clients</Link>
         <Link to={'/services'}>Services</Link>
         <Link to={'/news'}>News</Link>

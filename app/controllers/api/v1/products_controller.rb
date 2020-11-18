@@ -3,6 +3,12 @@ module Api
     class ProductsController < ApplicationController
       protect_from_forgery with: :null_session
 
+      def index
+        product = Product.all
+
+        render json: ProductSerializer.new(product).serializable_hash.to_json
+      end
+
       def create
         product = Product.new(product_params)
 
