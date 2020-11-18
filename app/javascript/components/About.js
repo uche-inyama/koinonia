@@ -76,7 +76,7 @@ const About = () => {
         <HeroSection>
           <Ul>
             <ImageWrapper>
-              <img src="https://koinoniamaya.s3.us-east-2.amazonaws.com/network-digital-hologram-internet-things-city-background-5g-network-wireless-systems.png" alt="" />
+              <img src="https://koinoniamaya.s3.us-east-2.amazonaws.com/network-digital-hologram-internet-things-city-background-5g-network-wireless-systems.png" alt="aboutImage" />
             </ImageWrapper>
             <Details>
               <span>Meaning</span>
@@ -110,7 +110,7 @@ const About = () => {
               </p>
             </Details>
             <ImageWrapper>
-              <img src="https://koinoniamaya.s3.us-east-2.amazonaws.com/5g-communication-technology-internet-network.png" alt="" />
+              <img src="https://koinoniamaya.s3.us-east-2.amazonaws.com/5g-communication-technology-internet-network.png" alt="aboutImage" />
             </ImageWrapper>
           </Ul>
         </HeroSection>
