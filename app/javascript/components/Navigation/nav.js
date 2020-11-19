@@ -55,7 +55,7 @@ const nav = () => {
           </ul>
         </Link>
         <Link to={'/clients'}>Clients</Link>
-        <Link to={'/services'}>Services</Link>
+        {/* <Link to={'/services'}>Services</Link> */}
         <Link to={'/news'}>News</Link>
         <Link to={'/contact'}>Contact Us</Link>
         <Link to={'#'}>search</Link>
