@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import Navigation from './Navigation/nav'
-// import { getPartners, getProducts } from '../action'
 import styled from 'styled-components'
 import Footer from './footer'
 
@@ -74,12 +73,15 @@ const ProductItem = styled.ul`
     text-align: center;
   }
 `
-
+const ViaviWrapper = styled.div`
+  .cyMkyl {
+    position: relative;
+    top: 250px;
+  }
+`;
 const Viavi = ({ partners, products }) => {
-
-
   return (
-    <div>
+    <ViaviWrapper>
       <Navigation />
       <PartnerLogoName>
         <ul>
@@ -105,7 +107,7 @@ const Viavi = ({ partners, products }) => {
         )}
       </ProductItem>
       <Footer />
-    </div>
+    </ViaviWrapper>
   )
 }
 
