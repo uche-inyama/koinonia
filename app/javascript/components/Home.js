@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { useState, Fragment } from 'react'
 import styled from 'styled-components'
 import Navigation from './Navigation/nav'
 import Footer from './footer'
@@ -34,7 +34,6 @@ const HeroSection = styled.div`
   }
   .button {
     padding: 10px 20px 10px 20px;
-    // border: solid 0.8px red;
     border-radius: 5px;
     background-color: #f7dcdc;
     color: red;
@@ -43,6 +42,9 @@ const HeroSection = styled.div`
     wdith: 150px;
     top: 220px;
     left: 100px;
+    &:hover {
+      box-shadow: 0 0 10px 0  grey;
+    }
   }
 
   h3 {
@@ -165,10 +167,16 @@ const Advert = styled.div`
 
 const Home = () => {
 
+  const [isOpen, setOpen] = useState(false)
   const handleSubmit = () => {
     const form = document.querySelector('form');
-    form.style.display = 'block'
-    console.log('submit a quote')
+    if (!isOpen) {
+      form.style.display = 'block'
+      setOpen(true)
+    } else {
+      form.style.display = 'none'
+      setOpen(false)
+    }
   }
   return (
     <div>

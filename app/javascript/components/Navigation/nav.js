@@ -42,7 +42,6 @@ const Nav = styled.nav`
     }
 `
 
-
 const nav = () => {
   return (
     <Nav>

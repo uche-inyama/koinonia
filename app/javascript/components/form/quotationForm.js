@@ -17,10 +17,12 @@ ul {
   padding-left: 0px;
 }
 form {
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0  grey, 0 0 10px -5px #505f79;
+  border-radius: 5px;
+  background-color: #fff;
   display: none;
   padding: 10px;
-  border: solid 1px red;
-  border-radius: 5px;
   .field {
     display: flex;
     flex-direction: column;
@@ -28,7 +30,6 @@ form {
   input {
     width: 320px;
     height: 40px;
-    border-radius: 5px;
   }
   li{
     padding: 8px;
