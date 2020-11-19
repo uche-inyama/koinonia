@@ -15,6 +15,8 @@ const PartnerLogoName = styled.div`
     display: grid;
     grid-template-columns: 2fr 5fr;
     .image-wrapper {
+      box-shadow: 0 0 5px 0  grey, 0 0 5px -5px #505f79;
+      border-radius: 5px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -44,13 +46,10 @@ const ProductItem = styled.ul`
   position: relative;
   padding: 0 20px;
   top: 250px;
-  fontfont-family: 'Open Sans', sans-serif;
+  list-style: none;
   li {
     box-shadow: 0 0 10px 0  grey, 0 0 10px -5px #505f79;
     border-radius: 5px;
-  }
-  li: {
-    border: 1px solid green;
   }
   .image-wrapper {
     display: flex;
@@ -62,19 +61,20 @@ const ProductItem = styled.ul`
   }
   
   .description{
+   fontfont-family: 'Open Sans', sans-serif;
    text-align: center;
    line-height: 1.2
   }
   .name {
     padding: 10px 0;
-    text-align: center;
-    line-height: 1.2
+    font-size: 1.2em;
+    border-bottom: 3px solid red;
+    width: 150px
+    margin-bottom: 10px
   }
 `
 
 const Viavi = ({ dispatch, partners, products }) => {
-  console.log(products)
-  console.log(partners)
 
   useEffect(() => {
     dispatch(getPartners());
