@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
 import reset from './reset.css';
 import style from './style.css';
 import './fontawesome';
@@ -10,8 +11,15 @@ import Clients from './Clients';
 import Services from './Services';
 import News from './News'
 import Contact from './Contact';
+import { getPartners, getProducts } from '../action'
 
-const App = () => {
+
+const App = ({ loadPartners, loadProducts }) => {
+
+  useEffect(() => {
+    loadPartners();
+    loadProducts();
+  }, [])
 
   return (
     <Switch>
@@ -25,4 +33,15 @@ const App = () => {
     </Switch>
   )
 }
-export default App;
+
+const mapDispatchToProps = dispatch => ({
+  loadPartners: (() => {
+    dispatch(getPartners());
+  }),
+  loadProducts: (() => {
+    dispatch(getProducts());
+  }),
+});
+
+export default connect(null, mapDispatchToProps)(App);
+

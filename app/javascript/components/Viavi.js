@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import Navigation from './Navigation/nav'
-import { getPartners, getProducts } from '../action'
+// import { getPartners, getProducts } from '../action'
 import styled from 'styled-components'
 import Footer from './footer'
 
@@ -75,12 +75,8 @@ const ProductItem = styled.ul`
   }
 `
 
-const Viavi = ({ dispatch, partners, products }) => {
+const Viavi = ({ partners, products }) => {
 
-  useEffect(() => {
-    dispatch(getPartners());
-    dispatch(getProducts());
-  }, [])
 
   return (
     <div>
