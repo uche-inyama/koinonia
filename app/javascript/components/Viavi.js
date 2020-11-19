@@ -15,8 +15,6 @@ const PartnerLogoName = styled.div`
     display: grid;
     grid-template-columns: 2fr 5fr;
     .image-wrapper {
-      box-shadow: 0 0 5px 0  grey, 0 0 5px -5px #505f79;
-      border-radius: 5px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -31,7 +29,11 @@ const PartnerLogoName = styled.div`
       .name {
         height: 30px;
         font-size: 1.2em;
-        padding-top: 5px;
+        padding: 10px 0;
+        font-size: 1.2em;
+        border-bottom: 3px solid red;
+        width: 150px
+        margin-bottom: 10px
       }
     }
   }
@@ -48,7 +50,7 @@ const ProductItem = styled.ul`
   top: 250px;
   list-style: none;
   li {
-    box-shadow: 0 0 10px 0  grey, 0 0 10px -5px #505f79;
+    box-shadow: 0 0 5px 0  grey, 0 0 5px -5px #505f79;
     border-radius: 5px;
   }
   .image-wrapper {
@@ -68,9 +70,7 @@ const ProductItem = styled.ul`
   .name {
     padding: 10px 0;
     font-size: 1.2em;
-    border-bottom: 3px solid red;
-    width: 150px
-    margin-bottom: 10px
+    text-align: center;
   }
 `
 
