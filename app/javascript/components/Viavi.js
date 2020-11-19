@@ -11,7 +11,7 @@ const PartnerLogoName = styled.div`
     display: flex;
     padding-right: 50px;
   }
-  .partner-profile{
+  .partner-profile {
     display: grid;
     grid-template-columns: 2fr 5fr;
     .image-wrapper {
@@ -23,7 +23,7 @@ const PartnerLogoName = styled.div`
     }
     .profile {
       fontfont-family: 'Open Sans', sans-serif;
-      .description{
+      .description {
         line-height: 1.4;
       }
       .name {
@@ -32,23 +32,25 @@ const PartnerLogoName = styled.div`
         padding-top: 5px;
       }
     }
-    
   }
-
 `;
 
 const ProductItem = styled.ul`
   display: grid;
-  grid-template-columns: 350px 350px 350px;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 350px 350px;
   grid-gap: 50px;
   justify-content: center;
   position: relative;
+  padding: 0 20px;
   top: 250px;
   fontfont-family: 'Open Sans', sans-serif;
   li {
-    box-shadow: 0 0 10px 0  grey, 0 0 15px -5px #505f79;
+    box-shadow: 0 0 10px 0  grey, 0 0 10px -5px #505f79;
     border-radius: 5px;
+  }
+  li: {
+    border: 1px solid green;
   }
   .image-wrapper {
     display: flex;
@@ -83,8 +85,8 @@ const Viavi = ({ dispatch, partners, products }) => {
       <Navigation />
       <PartnerLogoName>
         <ul>
-          {partners.map(ele =>
-            <div className="partner-profile">
+          {partners.map((ele, index) =>
+            <li key={index} className="partner-profile">
               <div className="image-wrapper">
                 <img src={`${ele.logo_url}`} />
               </div>
@@ -99,16 +101,15 @@ const Viavi = ({ dispatch, partners, products }) => {
                   Aerospace and Military`}
                 </div>
               </div>
-            </div>
+            </li>
           )}
         </ul>
       </PartnerLogoName>
       <ProductItem>
-        {products.map(ele =>
-          <li>
+        {products.map((ele, index) =>
+          <li key={index}>
             <div className="image-wrapper"><img src={`${ele.attributes.image_url}`} /></div>
             <div className="name">{ele.attributes.name}</div>
-            {/* <div className="description">{ele.attributes.description}</div> */}
           </li>
         )}
       </ProductItem>
