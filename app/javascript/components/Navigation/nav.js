@@ -12,36 +12,29 @@ const Nav = styled.nav`
   padding: 0 50px;
   display: flex;
   justify-content: space-between;
-    .logo {
-      padding: 15px 0;
+  font-family: 'Open Sans', sans-serif;
+  position: fixed;
+  z-index: 20;
+  .nav-items {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 70%;
+    padding: 0 10px;
+    align-items: center;
+    a {
+      color: #8c8c88;
+      text-decoration: none;  
     }
-
-    @media(min-width: 1024px){
-      font-family: 'Open Sans', sans-serif;
-      position: fixed;
-      z-index: 20;
-     .nav-items {
-       display: flex;
-       justify-content: space-around;
-       list-style: none;
-       width: 70%;
-       padding: 0 10px;
-       align-items: center;
-       a {
-         color: #8c8c88;
-         text-decoration: none;  
-       }
+  }
+  .logo {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100px;
+    height: auto;
      }
-     .logo {
-       background-repeat: no-repeat;
-       background-position: center;
-       background-size: cover;
-       width: 100px;
-       height: auto;
-     }
-    }
 `
-
 const nav = () => {
   return (
     <Nav>
@@ -57,9 +50,9 @@ const nav = () => {
         {/* <Link to={'/services'}>Services</Link> */}
         <Link to={'/news'}>News</Link>
         <Link to={'/contact'}>Contact Us</Link>
-        <Link to={'#'}>search</Link>
+        {/* <Link to={'#'}>search</Link> */}
       </ul>
-      <Hamburger />
+      {/* <Hamburger /> */}
     </Nav>
   )
 }

@@ -108,8 +108,7 @@ font-family: 'Open Sans', sans-serif;
       justify-content: center;
       width: 400px;
       height: 400px;
-    }              <label>comment</label>
-
+    }
   }
 `;
 

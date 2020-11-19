@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import Navigation from './Navigation/nav'
 import { getPartners, getProducts } from '../action'
 import styled from 'styled-components'
+import Footer from './footer'
 
 const PartnerLogoName = styled.div`
   position: relative;
@@ -107,6 +108,7 @@ const Viavi = ({ dispatch, partners, products }) => {
           </li>
         )}
       </ProductItem>
+      <Footer />
     </div>
   )
 }
