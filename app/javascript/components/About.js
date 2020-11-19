@@ -14,28 +14,42 @@ const Main = styled.main`
   position: relative;
   z-index: 10;
 `;
+
 const HeroSection = styled.div`
   font-family: 'Open Sans', sans-serif;
   font-size: 0.9em;
   line-height: 1.5;
   padding: 30px 50px 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Ul = styled.ul`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  grid-template-columns: 500px 500px;
+  grid-gap: 30px;
   grid-template-rows: repeat(1, 400px);
   list-style: none;
   margin-top: 100px;
+  @media(max-width: 1024px){
+    grid-template-columns: 400px 400px;
+  }
+ 
 `;
 const ImageWrapper = styled.li`
   border-radius: 20px;
   position: relative;
   z-index: 1;
   img {
-    width: 600px;
+    width: 500px;
     height: 450px;
+  }
+  @media(max-width: 1024px){
+    img {
+      width: 400px;
+      height: 350px;
+    }
   }
 `;
 
