@@ -27,13 +27,13 @@ const PartnerLogoName = styled.div`
         line-height: 1.4;
       }
       .name {
-        height: 30px;
+        height: 40px;
         font-size: 1.2em;
         padding: 10px 0;
         font-size: 1.2em;
         border-bottom: 3px solid red;
-        width: 150px
-        margin-bottom: 10px
+        width: 150px;
+        margin-bottom: 10px;
       }
     }
   }
