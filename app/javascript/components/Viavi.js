@@ -74,7 +74,7 @@ const ProductItem = styled.ul`
   }
 `
 const ViaviWrapper = styled.div`
-  .cyMkyl {
+  .gTLZXx {
     position: relative;
     top: 250px;
   }
