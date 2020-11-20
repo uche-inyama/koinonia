@@ -6,8 +6,8 @@ import Footer from './footer'
 
 const AboutWrapper = styled.div`
 .sc-hKgILt  {
-  position: relative;
-  top: 50px;
+  // position: relative;
+  // top: 50px;
 }
 `;
 const Main = styled.main`

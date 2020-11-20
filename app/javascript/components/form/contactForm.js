@@ -26,8 +26,7 @@ const Contactform = styled.div`
   .field {
     display: flex;
     flex-direction: column;
-    height: 70px;
-    font-size: 0.8em;
+    height: 72px;
     .submit{
       margin-top: 20px;
       border-radius: 3px;
@@ -36,11 +35,12 @@ const Contactform = styled.div`
       height: 35px;
       border-radius: 5px;
       border: 1px solid grey;
-      margin-bottom: 5px;
     }
     p {
       color: red;
       margin-bottom: 0px;
+      font-size: 0.8em;
+      height: 0px;
     }
     label{
       margin-bottom: 2px;

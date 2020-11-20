@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Hamburger from './Hamburger'
 import { logoUrl } from '../imageUrl'
+import DropDown from '../DropDown/dropDown'
 
 const Nav = styled.nav`
   width: 100%;
@@ -43,10 +44,7 @@ const nav = () => {
       <ul className="nav-items">
         <Link to={'/'}>Home</Link>
         <Link to={'/about'}>About Us</Link>
-        <Link to={'/partners/viavi'}>Viavi
-            <ul className="drop-down">
-          </ul>
-        </Link>
+        <DropDown />
         <Link to={'/clients'}>Clients</Link>
         {/* <Link to={'/services'}>Services</Link> */}
         <Link to={'/news'}>News</Link>

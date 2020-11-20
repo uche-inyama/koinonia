@@ -6,11 +6,10 @@ import { contactImage } from './imageUrl'
 import Footer from './footer'
 
 const ContactWrapper = styled.div`
-  
-  .sc-hKgILt  {
-    position: relative;
-    top: 150px;
-  }
+  // .sc-hKgILt  {
+  //   position: relative;
+  //   top: 150px;
+  // }
 `;
 const ContactImage = styled.div`
 position: relative;
