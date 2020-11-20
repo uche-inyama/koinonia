@@ -35,5 +35,5 @@ export const DropDownList = styled.ul`
 export const ListItem = styled.li`
   list-style: none;
   margin-bottom: 0.8em;
-  padding: 10px 0;
+  padding: 5px 0;
 `;

@@ -30,7 +30,7 @@ const dropDown = ({ partners }) => {
         <DropDownListContainer>
           <DropDownList>
             {partners.map((partner, index) =>
-              <Link key={index}>
+              <Link to={'/partners/viavi'} key={index}>
                 <ListItem onClick={onOptionClicked(partner)} key={index} className="partner-profile">
                   {partner.name}
                 </ListItem>

@@ -30,7 +30,7 @@ export const requestProducts = (data) => ({
 
 
 export const receiveNewPartner = (data) => {
-  const url = '/api/v1/partners'
+  const url = 'https://still-tor-28457.herokuapp.com/api/v1/partners'
   return dispatch => {
     axios.post(url, data)
       .then(response => dispatch(postNewPartner(response.data.data.attributes)))
@@ -38,7 +38,7 @@ export const receiveNewPartner = (data) => {
 }
 
 export const receiveNewProduct = (data) => {
-  const url = '/api/v1/products'
+  const url = 'https://still-tor-28457.herokuapp.com/api/v1/products'
   return dispatch => {
     axios.post(url, data)
       .then(response => dispatch(postNewProduct(response.data.data.attributes)))
@@ -46,7 +46,7 @@ export const receiveNewProduct = (data) => {
 }
 
 export const getPartners = () => {
-  const url = '/api/v1/partners'
+  const url = 'https://still-tor-28457.herokuapp.com/api/v1/partners'
   return dispatch => {
     axios.get(url)
       .then(response => dispatch(requestPartners(response.data.data[0].attributes)))
@@ -54,7 +54,7 @@ export const getPartners = () => {
 }
 
 export const getProducts = () => {
-  const url = '/api/v1/products'
+  const url = 'https://still-tor-28457.herokuapp.com/api/v1/products'
   return dispatch => {
     axios.get(url)
       .then(response => dispatch(requestProducts(response.data.data)))
