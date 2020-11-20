@@ -36,6 +36,11 @@ const PartnerLogoName = styled.div`
         margin-bottom: 10px;
       }
     }
+    @media(max-width: 997px){
+      .profile {
+        margin-left: 20px;
+      }
+    }
   }
 `;
 

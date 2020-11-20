@@ -5,7 +5,7 @@ import { zte, uplink, sky, protech, optimum, etisalat, elsewedy, alhamd } from '
 import Footer from './footer'
 
 const ClientsWrapper = styled.div`
-  padding: 0 70px;
+  padding: 0 50px;
   position: relative;
   top: 100px;
   font-family: 'Open Sans', sans-serif;
@@ -28,7 +28,6 @@ const ClientsWrapper = styled.div`
   .clients-logo{
     display: flex;
     justify-content: space-between;
-    padding: 0 100px;
     .image-wrapper {
       display: flex;
       align-items: center;
