@@ -64,15 +64,14 @@ const contactForm = () => {
 
   const handleChange = (e) => {
     setContact(Object.assign({}, contact, { [e.target.name]: e.target.value }));
-    console.log('contact:', contact)
   }
 
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault()
-    onSubmitClick(newPartner)
-    setNewPartner({})
-  }
+  // const handleFormSubmit = (e) => {
+  //   e.preventDefault()
+  //   onSubmitClick(newPartner)
+  //   setNewPartner({})
+  // }
 
 
   return (

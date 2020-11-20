@@ -51,9 +51,11 @@ const quotationForm = () => {
 
   const [quotation, setQuotation] = useState({});
 
-
+  const formDisplay = () => {
+    const form = document.querySelector('form');
+    form.style.display = 'none'
+  }
   const handleFormSubmit = (e) => {
-    e.preventDefault();
     axios.post('/api/v1/quotations', { quotation })
       .catch(err => err)
   }
