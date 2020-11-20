@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useForm } from 'react-hook-form'
 import styled from 'styled-components'
 import axios from 'axios'
 
@@ -26,6 +27,10 @@ form {
   .field {
     display: flex;
     flex-direction: column;
+    p {
+      color: red;
+      font-size: 0.8em;
+    }
   }
   input {
     width: 320px;
@@ -50,12 +55,15 @@ form {
 const quotationForm = () => {
 
   const [quotation, setQuotation] = useState({});
+  const { register, errors, handleSubmit } = useForm();
+
 
   const formDisplay = () => {
     const form = document.querySelector('form');
     form.style.display = 'none'
   }
-  const handleFormSubmit = (e) => {
+
+  const onSubmit = (e) => {
     axios.post('/api/v1/quotations', { quotation })
       .catch(err => err)
   }
@@ -66,36 +74,42 @@ const quotationForm = () => {
 
   return (
     <Quotation>
-      <form onSubmit={handleFormSubmit}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <ul className="form-items-wrapper">
           <li className="name-mobile">
             <div className="field">
-              <input type="text" name="first_name" onChange={handleChange} placeholder="First name" />
+              <input type="text" ref={register({ required: true, maxLength: 20 })} name="first_name" onChange={handleChange} placeholder="First name" />
+              {errors.first_name && <p>first name is required</p>}
             </div>
           </li>
           <li>
             <div className="field space">
-              <input type="text" name="last_name" onChange={handleChange} placeholder="Last name" />
+              <input type="text" ref={register({ required: true, maxLength: 20 })} name="last_name" onChange={handleChange} placeholder="Last name" />
+              {errors.last_name && <p>last name is required</p>}
             </div>
           </li>
           <li>
             <div className="field">
-              <input type="text" name="phone" onChange={handleChange} placeholder="Phone" />
+              <input type="text" ref={register({ required: true, minLength: 6, maxLength: 12 })} name="phone" onChange={handleChange} placeholder="Phone" />
+              {errors.phone && <p>phone number is required</p>}
             </div>
           </li>
           <li>
             <div className="field">
-              <input type="text" name="email" onChange={handleChange} placeholder="Email" />
+              <input type="text" ref={register({ required: true, pattern: /^\S+@\S+$/i })} name="email" onChange={handleChange} placeholder="Email" />
+              {errors.email && <p>email is required</p>}
             </div>
           </li>
           <li>
             <div className="field">
-              <input type="text" name="product_list" onChange={handleChange} placeholder="Product list" />
+              <input type="text" ref={register({ required: true })} name="product_list" onChange={handleChange} placeholder="Product list" />
+              {errors.product_list && <p>product list is required</p>}
             </div>
           </li>
           <li>
             <div className="field">
-              <textarea type="text" name="comment" onChange={handleChange} rows="5" cols="30" placeholder="Comment" />
+              <textarea type="text" ref={register({ required: true })} name="comment" onChange={handleChange} rows="5" cols="30" placeholder="Comment" />
+              {errors.comment && <p>comment is required</p>}
             </div>
           </li>
           <li>
