@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import Footer from './footer'
 
 const OurEvents = styled.div`
+position: relative;
+top: 150px;
 justify-content: space-around;
 height: 1000px;
 font-family: 'Open Sans', sans-serif;

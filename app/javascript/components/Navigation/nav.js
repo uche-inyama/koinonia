@@ -6,7 +6,7 @@ import { logoUrl } from '../imageUrl'
 
 const Nav = styled.nav`
   width: 100%;
-  height: 65px;
+  height: 100px;
   border-bottom: 2px solid #f1f1f1;
   background-color: #fff;
   padding: 0 50px;
@@ -25,13 +25,14 @@ const Nav = styled.nav`
     a {
       color: #8c8c88;
       text-decoration: none;  
+      font-size: 1.2em;
     }
   }
   .logo {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 100px;
+    width: 250px;
     height: auto;
      }
 `
