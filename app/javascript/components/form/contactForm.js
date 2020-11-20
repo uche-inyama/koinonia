@@ -77,7 +77,7 @@ const contactForm = () => {
 
   return (
     <Contactform>
-      <form onSubmit={handleFormSubmit}>
+      <form onSubmit={handleSubmit}>
         <ul className="form-items-wrapper">
           <li className="name-mobile">
             <div className="field">
