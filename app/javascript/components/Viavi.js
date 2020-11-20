@@ -102,7 +102,13 @@ const Viavi = ({ partners, products }) => {
               </div>
               <div className="profile">
                 <div className="name">VIAVI Solutions</div>
-                <div className="description">{ele.name}</div>
+                <div className="description">
+                  {`VIAVI solution has more than 3500 employees & 60 offices serving the needs of our global customers. 
+                  Its Corporate Headquarters is in the united states of America. 
+                  Viavi has acquired 7 major companies in the telecommunications sector in the last 10 years. 
+                  VIAVI Solutions has two primary businesses – Network and Service Enablement (NSE) and Optical Security and Performance (OSP). 
+                  VIAVI customers include Communications Service Providers; Enterprises, Cloud Providers, and Data Centers; Network Equipment Manufacturers; Network Installers; Aerospace and Military`}
+                </div>
               </div>
             </li>
           )}
