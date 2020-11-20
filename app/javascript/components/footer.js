@@ -27,9 +27,11 @@ const SocialMedia = styled.ul`
   width: 40%;
   padding-left: 0px;
   list-style: none;
-  li {
+  a {
     margin-left: 10px;
     color: red;
+    text-decoration: none;
+    cursor: pointer;
     svg {
       font-size: 1.2em;
     }
@@ -104,9 +106,15 @@ const footer = () => {
         <SocialMediaWrapper>
           <h3>Follow Us</h3>
           <SocialMedia>
-            <li><FontAwesomeIcon icon={['fab', 'facebook-f']} /></li>
-            <li><FontAwesomeIcon icon={['fab', 'linkedin-in']} /></li>
-            <li><FontAwesomeIcon icon={['fab', 'youtube']} /></li>
+            <a href="https://www.facebook.com/KoinoniaEnterprises" target="_blank">
+              <FontAwesomeIcon icon={['fab', 'facebook-f']} />
+            </a>
+            <a href="https://www.linkedin.com/company/koinonia-enterprises-pty-ltd" target="_blank">
+              <FontAwesomeIcon icon={['fab', 'linkedin-in']} />
+            </a>
+            <a href="https://www.youtube.com/channel/UCQZdm7RzpE9Kp80aFgraVpw" target="_blank">
+              <FontAwesomeIcon icon={['fab', 'youtube']} />
+            </a>
           </SocialMedia>
         </SocialMediaWrapper>
       </div>
@@ -139,9 +147,15 @@ const footer = () => {
         <SocialMediaWrapper>
           <h3>Follow Us</h3>
           <SocialMedia>
-            <li><FontAwesomeIcon icon={['fab', 'facebook-f']} /></li>
-            <li><FontAwesomeIcon icon={['fab', 'linkedin-in']} /></li>
-            <li><FontAwesomeIcon icon={['fab', 'youtube']} /></li>
+            <a href="https://www.facebook.com/KoinoniaEnterprises" target="_blank">
+              <FontAwesomeIcon icon={['fab', 'facebook-f']} />
+            </a>
+            <a href="https://www.linkedin.com/company/koinonia-enterprises-pty-ltd" target="_blank">
+              <FontAwesomeIcon icon={['fab', 'linkedin-in']} />
+            </a>
+            <a href="https://www.youtube.com/channel/UCQZdm7RzpE9Kp80aFgraVpw" target="_blank">
+              <FontAwesomeIcon icon={['fab', 'youtube']} />
+            </a>
           </SocialMedia>
         </SocialMediaWrapper>
       </div>
