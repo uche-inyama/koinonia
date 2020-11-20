@@ -16,17 +16,16 @@ export const DropDownListContainer = styled.div`
 `;
 
 export const DropDownList = styled.ul`
+  background-color: #fff;
   position: absolute;
   top: 100px;
   padding: 0;
   margin: 0;
-  padding-left: #fff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  color: #8c8c88;;
+  box-shadow: 0 0 15px 0  grey;
   box-sizing: border-box;
-  color:  #8c8c88;
-  font-size: 1.3rem;
-  font-weight: 500;
-  width: 15%;
+  font-size: 0.8em;
+  width: 10%;
   &:first-child {
     padding-top: 0.8em;
   }
@@ -35,5 +34,5 @@ export const DropDownList = styled.ul`
 export const ListItem = styled.li`
   list-style: none;
   margin-bottom: 0.8em;
-  padding: 5px 0;
+  text-align: center;
 `;
