@@ -5,10 +5,10 @@ import Footer from './footer'
 
 
 const AboutWrapper = styled.div`
-.sc-hKgILt  {
-  position: relative;
-  top: 50px;
-}
+// .sc-hKgILt  {
+//   position: relative;
+//   top: 50px;
+// }
 `;
 const Main = styled.main`
   position: relative;
@@ -129,7 +129,7 @@ const About = () => {
           </Ul>
         </HeroSection>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </AboutWrapper>
   )
 }
