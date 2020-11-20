@@ -81,13 +81,12 @@ const ProductItem = styled.ul`
   @media(max-width: 997px){
     grid-template-columns: repeat(2, 1fr);
   }
- 
 `
 const ViaviWrapper = styled.div`
-  .gTLZXx {
-    position: relative;
-    top: 250px;
-  }
+  // .gTLZXx {
+  //   position: relative;
+  //   top: 250px;
+  // }
 `;
 const Viavi = ({ partners, products }) => {
   return (
