@@ -36,6 +36,7 @@ const Contactform = styled.div`
       height: 35px;
       border-radius: 5px;
       border: 1px solid grey;
+      margin-bottom: 5px;
     }
     p {
       color: red;
