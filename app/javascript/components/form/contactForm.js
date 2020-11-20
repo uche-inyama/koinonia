@@ -68,6 +68,7 @@ const contactForm = () => {
   const onSubmit = (e) => {
     axios.post('/api/v1/contacts', { contact })
       .catch(err => err);
+    window.location.reload()
   }
 
   const handleChange = (e) => {

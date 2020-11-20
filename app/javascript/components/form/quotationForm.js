@@ -66,6 +66,7 @@ const quotationForm = () => {
   const onSubmit = (e) => {
     axios.post('/api/v1/quotations', { quotation })
       .catch(err => err)
+    window.location.reload()
   }
 
   const handleChange = (e) => {
