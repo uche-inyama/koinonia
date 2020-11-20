@@ -49,6 +49,9 @@ const ProductItem = styled.ul`
   padding: 0 20px;
   top: 250px;
   list-style: none;
+  @media(max-width: 997px){
+    grid-template-columns: repeat(2, 1fr);
+  }
   li {
     box-shadow: 0 0 5px 0  grey, 0 0 5px -5px #505f79;
     border-radius: 5px;
@@ -71,9 +74,6 @@ const ProductItem = styled.ul`
     padding: 10px 0;
     font-size: 1.2em;
     text-align: center;
-  }
-  @media(max-height: 997px){
-    grid-template-columns: repeat(2, 1fr);
   }
 `
 const ViaviWrapper = styled.div`
