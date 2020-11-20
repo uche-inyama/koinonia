@@ -6,6 +6,7 @@ import {
   DropDownContainer,
   DropDownHeader,
   DropDownList,
+  ListItem
 } from './styledDropDown'
 
 const dropDown = ({ partners }) => {
@@ -26,15 +27,17 @@ const dropDown = ({ partners }) => {
     <DropDownContainer>
       <DropDownHeader onClick={toggling}>Partners</DropDownHeader>
       {isOpen && (
-        <DropDownList>
-          {partners.map((partner, index) =>
-            <Link to={'/partners/viavi'} key={index}>
-              <li onClick={onOptionClicked(partner)} key={index} className="partner-profile">
-                {partner.name}
-              </li>
-            </Link>
-          )}
-        </DropDownList>
+        <DropDownListContainer>
+          <DropDownList>
+            {partners.map((partner, index) =>
+              <Link key={index}>
+                <ListItem onClick={onOptionClicked(partner)} key={index} className="partner-profile">
+                  {partner.name}
+                </ListItem>
+              </Link>
+            )}
+          </DropDownList>
+        </DropDownListContainer>
       )}
     </DropDownContainer>
   )
