@@ -72,6 +72,9 @@ const ProductItem = styled.ul`
     font-size: 1.2em;
     text-align: center;
   }
+  @media(max-height: 997px){
+    grid-template-columns: repeat(2, 1fr);
+  }
 `
 const ViaviWrapper = styled.div`
   .gTLZXx {
