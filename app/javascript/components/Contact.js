@@ -6,24 +6,32 @@ import { contactImage } from './imageUrl'
 import Footer from './footer'
 
 const ContactWrapper = styled.div`
+  
   .sc-hKgILt  {
     position: relative;
     top: 150px;
   }
 `;
 const ContactImage = styled.div`
-  position: relative;
+position: relative;
   top: 150px;
+  left: 0px;
   display: flex;
   justify-content: space-around;
-  padding: 0 50px;
   width: 100%;
-  
+  .dUtfIP {
+    position: relative;
+    left: 20px;
+    margin-left: 40px
+  }
+  .contact-image-wrapper {
+    margin-left: 20px;
+  }
 `;
 
 const Contact = () => {
   return (
-    <ContactWrapper>
+    <div>
       <Navigation />
       <ContactImage>
         <ContactForm />
@@ -32,7 +40,8 @@ const Contact = () => {
         </div>
       </ContactImage>
       <Footer className="contact-footer" />
-    </ContactWrapper>
+    </div>
+
   )
 }
 export default Contact;
