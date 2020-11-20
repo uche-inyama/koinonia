@@ -40,6 +40,7 @@ const Contactform = styled.div`
     }
     p {
       color: red;
+      margin-bottom: 0px;
     }
     label{
       margin-bottom: 2px;
