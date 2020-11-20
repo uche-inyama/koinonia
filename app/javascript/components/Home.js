@@ -102,7 +102,7 @@ font-family: 'Open Sans', sans-serif;
     .events-image-wrapper {
       border-radius: 10px;
       box-shadow: 0 0 18px 0  #7f8cff, 0 0 15px -5px #505f79;
-      margin-left: 20px;
+      margin: 0 20px;
       display: flex;
       align-items: center;
       justify-content: center;

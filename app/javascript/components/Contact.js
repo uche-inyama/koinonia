@@ -19,19 +19,17 @@ position: relative;
   display: flex;
   justify-content: space-around;
   width: 100%;
-  .dUtfIP {
-    position: relative;
-    left: 20px;
-    margin-left: 40px
-  }
   .contact-image-wrapper {
-    margin-left: 20px;
+    padding-top: 20px;
+    img {
+      width: 400px;
+    }
   }
 `;
 
 const Contact = () => {
   return (
-    <div>
+    <ContactWrapper>
       <Navigation />
       <ContactImage>
         <ContactForm />
@@ -40,8 +38,7 @@ const Contact = () => {
         </div>
       </ContactImage>
       <Footer className="contact-footer" />
-    </div>
-
+    </ContactWrapper>
   )
 }
 export default Contact;
