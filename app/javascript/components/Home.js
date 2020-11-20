@@ -8,10 +8,10 @@ import QuotationForm from './form/quotationForm'
 
 
 const Main = styled.main`
-position: absolute;
-width: 100%;
-top: -50px;
-height: 250vh;
+// position: absolute;
+// width: 100%;
+// top: -50px;
+// height: 250vh;
 `;
 const HeroSection = styled.div`
   height: 908px;
@@ -53,7 +53,6 @@ const HeroSection = styled.div`
     color: #fff;
     font-weight: 700;
   }
- 
 `;
 
 
