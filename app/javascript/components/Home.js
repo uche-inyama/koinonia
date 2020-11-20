@@ -107,6 +107,10 @@ font-family: 'Open Sans', sans-serif;
       justify-content: center;
       width: 400px;
       height: 400px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 `;
@@ -191,10 +195,10 @@ const Home = () => {
           <div className="event-title"><h4>our events</h4></div>
           <div className="event-one">
             <div className="events-image-wrapper" >
-              <img src='https://koinoniamaya.s3.us-east-2.amazonaws.com/2018-Logo-01-300x272-1.png'></img>
+              <img src='https://koinoniamaya.s3.us-east-2.amazonaws.com/eventCairo.jpg'></img>
             </div>
             <div className="event-details">
-              <h4>ICT 2018</h4>
+              <h4>ICT 2020</h4>
               <p>
                 Cairo ICT is an international exhibition and conference for information
                 and communication technology and a meeting place for amateurs and professionals
