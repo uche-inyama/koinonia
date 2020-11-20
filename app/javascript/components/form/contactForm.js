@@ -26,7 +26,7 @@ const Contactform = styled.div`
   .field {
     display: flex;
     flex-direction: column;
-    height: 100px;
+    height: 70px;
     font-size: 0.8em;
     .submit{
       margin-top: 20px;
