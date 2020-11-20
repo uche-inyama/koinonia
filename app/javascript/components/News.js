@@ -34,7 +34,7 @@ const OurEvents = styled.div`
       flex-direction: column;
       justify-content: center;
       width: 600px;
-      margin-left: 20px;
+      margin: 0 20px;
       h4 {
         border-bottom: solid 2px red;
         width: 120px;
