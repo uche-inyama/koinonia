@@ -116,7 +116,7 @@ const Viavi = ({ partners, products }) => {
           </li>
         )}
       </ProductItem>
-      <Footer />
+      {/* <Footer /> */}
     </ViaviWrapper>
   )
 }

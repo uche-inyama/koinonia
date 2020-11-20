@@ -9,6 +9,7 @@ export const DropDownHeader = styled.div`
   font-size: 1.3rem;
   color:  #8c8c88;
   background-color: #fff;
+  cursor: pointer;
 `;
 
 export const DropDownListContainer = styled.div`
@@ -16,7 +17,7 @@ export const DropDownListContainer = styled.div`
 `;
 
 export const DropDownList = styled.ul`
-  background-color: #fff;
+  background-color: white;
   position: absolute;
   top: 100px;
   padding: 0;
