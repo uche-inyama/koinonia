@@ -49,7 +49,7 @@ export const getPartners = () => {
   const url = 'https://still-tor-28457.herokuapp.com/api/v1/partners'
   return dispatch => {
     axios.get(url)
-      .then(response => dispatch(requestPartners(response.data.data[0].attributes)))
+      .then(response => dispatch(requestPartners(response.data.data)))
   }
 }
 
