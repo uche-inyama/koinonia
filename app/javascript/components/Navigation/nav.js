@@ -15,6 +15,7 @@ const Nav = styled.nav`
   justify-content: space-between;
   font-family: 'Open Sans', sans-serif;
   position: fixed;
+  top: 0px;
   z-index: 20;
   .nav-items {
     display: flex;

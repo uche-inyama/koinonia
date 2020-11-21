@@ -6,15 +6,11 @@ import { contactImage } from './imageUrl'
 import Footer from './footer'
 
 const ContactWrapper = styled.div`
-  // .sc-hKgILt  {
-  //   position: relative;
-  //   top: 150px;
-  // }
-`;
-const ContactImage = styled.div`
-position: relative;
+  position: relative;
   top: 150px;
   left: 0px;
+`;
+const ContactImage = styled.div`
   display: flex;
   justify-content: space-around;
   width: 100%;
@@ -36,7 +32,9 @@ const Contact = () => {
           <img src={contactImage} />
         </div>
       </ContactImage>
-      {/* <Footer className="contact-footer" /> */}
+      <div>
+        <Footer className="contact-footer" />
+      </div>
     </ContactWrapper>
   )
 }

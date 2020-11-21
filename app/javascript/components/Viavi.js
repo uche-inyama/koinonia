@@ -4,9 +4,17 @@ import Navigation from './Navigation/nav'
 import styled from 'styled-components'
 import Footer from './footer'
 
-const PartnerLogoName = styled.div`
+
+const ViaviWrapper = styled.div`
   position: relative;
-  top: 100px;
+  top: 150px;
+  .footer-section {
+    margin-top: 40px;
+  }
+`;
+
+const PartnerLogoName = styled.div`
+  margin-bottom: 40px;
   ul {
     display: flex;
     padding-right: 50px;
@@ -50,9 +58,7 @@ const ProductItem = styled.ul`
   grid-template-rows: 350px 350px;
   grid-gap: 50px;
   justify-content: center;
-  position: relative;
   padding: 0 20px;
-  top: 250px;
   list-style: none;
   li {
     box-shadow: 0 0 5px 0  grey, 0 0 5px -5px #505f79;
@@ -82,46 +88,44 @@ const ProductItem = styled.ul`
     grid-template-columns: repeat(2, 1fr);
   }
 `
-const ViaviWrapper = styled.div`
-  // .gTLZXx {
-  //   position: relative;
-  //   top: 250px;
-  // }
-`;
 const Viavi = ({ partners, products }) => {
   return (
     <ViaviWrapper>
       <Navigation />
-      <PartnerLogoName>
-        <ul>
-          {partners.map((ele, index) =>
-            <li key={index} className="partner-profile">
-              <div className="image-wrapper">
-                <img src={`${ele.logo_url}`} />
-              </div>
-              <div className="profile">
-                <div className="name">VIAVI Solutions</div>
-                <div className="description">
-                  {`VIAVI solution has more than 3500 employees & 60 offices serving the needs of our global customers. 
+      <main>
+        <PartnerLogoName>
+          <ul>
+            {partners.map((ele, index) =>
+              <li key={index} className="partner-profile">
+                <div className="image-wrapper">
+                  <img src={`${ele.logo_url}`} />
+                </div>
+                <div className="profile">
+                  <div className="name">VIAVI Solutions</div>
+                  <div className="description">
+                    {`VIAVI solution has more than 3500 employees & 60 offices serving the needs of our global customers. 
                   Its Corporate Headquarters is in the united states of America. 
                   Viavi has acquired 7 major companies in the telecommunications sector in the last 10 years. 
                   VIAVI Solutions has two primary businesses – Network and Service Enablement (NSE) and Optical Security and Performance (OSP). 
                   VIAVI customers include Communications Service Providers; Enterprises, Cloud Providers, and Data Centers; Network Equipment Manufacturers; Network Installers; Aerospace and Military`}
+                  </div>
                 </div>
-              </div>
+              </li>
+            )}
+          </ul>
+        </PartnerLogoName>
+        <ProductItem>
+          {products.map((ele, index) =>
+            <li key={index}>
+              <div className="image-wrapper"><img src={`${ele.attributes.image_url}`} /></div>
+              <div className="name">{ele.attributes.name}</div>
             </li>
           )}
-        </ul>
-      </PartnerLogoName>
-      <ProductItem>
-        {products.map((ele, index) =>
-          <li key={index}>
-            <div className="image-wrapper"><img src={`${ele.attributes.image_url}`} /></div>
-            <div className="name">{ele.attributes.name}</div>
-          </li>
-        )}
-      </ProductItem>
-      {/* <Footer /> */}
+        </ProductItem>
+      </main>
+      <div className="footer-section">
+        <Footer />
+      </div>
     </ViaviWrapper>
   )
 }

@@ -7,12 +7,6 @@ import { advert } from './imageUrl'
 import QuotationForm from './form/quotationForm'
 
 
-const Main = styled.main`
-// position: absolute;
-// width: 100%;
-// top: -50px;
-// height: 250vh;
-`;
 const HeroSection = styled.div`
   height: 908px;
   background-color:  #7b7d79;
@@ -183,7 +177,7 @@ const Home = () => {
   return (
     <div>
       <Navigation />
-      <Main>
+      <main>
         <HeroSection>
           <QuotationForm />
           <div className="image-wrapper">
@@ -234,7 +228,7 @@ const Home = () => {
           </div>
         </Advert>
         <Footer />
-      </Main>
+      </main>
     </div>
   )
 }
