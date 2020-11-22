@@ -92,22 +92,19 @@ const About = (props) => {
             </ImageWrapper>
             <Details>
               <span>Meaning</span>
-              <p>Koinonia Enterprises is an Australian company specialized in fixed line
-              and Mobile Communications Networks providing turnkey solutions in
-              design, deployment and integration services for high-performance
-              telecommuications networks, providing an end to end capability,
-              commencing with Engineering and planning services, through to
-              Equipment Supply, Installation, Commissioning, Integration and Managed Services.
+              <p>Koinonia is a leading Network Solutions provider and Distribution Company located in Australia with
+              wide regional presence in Egypt and the Middle East.
+              Our independent Australian ownership puts us in a unique position to offer our integration and installation partners and customers a best-in-class solution.
+              We are exclusive agents for optical tools and equipment from around the world, and bring them to you backed with full local after sales services, warranty and technical support.
               </p>
-              <p>Along with our ISO 9001, ISO 14100 and ISO AS/NZS 4801 certifications
-              by SAI Global; We pride ourselves in delivering quality work to the
-              highest regard with proven tracked records and reference across Australia.
+              <p>Our buying power allows us to offer major brands at highly competitive prices, regardless of the size of the client’s purchase order.
+              We also help our clients increase invoice value by keeping abreast of new technologies that allow the job to be done faster, better and cheaper.
+              Our support has helped many small businesses scale successfully as we select products based on our client’s requirements (not cosy vendor partnerships). This means our vendors react to the market instead of dictating it.
               </p>
               <p>
-                Using Koinonia extensive database we have access to qualified local
-                and international resources around the globe. Our experience
-                in working visas ensures a smooth transition for both clients and
-                candidates when sourcing international candidates.
+                Over the years Koinonia have been entrusted with the supply, design and support services for some of Australia’s and Egypt’s largest infrastructure
+                and telecommunications projects and a multitude of industries including:
+                Mining, Utility, Telecommunications, Education, Government, Construction and Enterprise market segments.
               </p>
             </Details>
           </Ul>
@@ -134,3 +131,4 @@ const About = (props) => {
   )
 }
 export default About;
+
