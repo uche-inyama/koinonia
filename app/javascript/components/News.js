@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navigation from './Navigation/nav'
 import styled from 'styled-components'
 import Footer from './footer'
@@ -64,7 +64,8 @@ font-family: 'Open Sans', sans-serif;
   }
 `;
 
-const News = () => {
+const News = (props) => {
+
   return (
     <div>
       <Navigation />

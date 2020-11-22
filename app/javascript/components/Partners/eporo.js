@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import Navigation from './Navigation/nav'
+import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
-import Footer from './footer'
-
+import Navigation from '../Navigation/nav'
+import { getPartnerBySlug } from '../../action'
+import Footer from '../footer'
 
 const ViaviWrapper = styled.div`
   position: relative;
@@ -26,8 +27,12 @@ const PartnerLogoName = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100%;
-      height: 100%;
+      width: 300px;
+      height: 100px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
     .profile {
       fontfont-family: 'Open Sans', sans-serif;
@@ -42,6 +47,7 @@ const PartnerLogoName = styled.div`
         border-bottom: 3px solid red;
         width: 150px;
         margin-bottom: 10px;
+        margin-left: 20px;
       }
     }
     @media(max-width: 997px){
@@ -88,46 +94,66 @@ const ProductItem = styled.ul`
     grid-template-columns: repeat(2, 1fr);
   }
 `
-const Viavi = ({ partners, products }) => {
-  return (
-    <ViaviWrapper>
-      <Navigation />
-      <main>
-        <PartnerLogoName>
-          <ul>
-            {/* {partners.map((ele, index) =>
-              <li key={index} className="partner-profile">
+
+const eporo = ({ loadPartner, partner, isFetching }) => {
+  console.log(partner)
+
+  let { slug } = useParams();
+  const url = `/api/v1/partners/${slug}`
+  useEffect(() => {
+    loadPartner(url)
+  }, [])
+
+  if (isFetching) {
+    return <div className="status">loading...</div>
+  }
+
+  if (partner) {
+    return (
+      <ViaviWrapper>
+        <Navigation />
+        <main>
+          <PartnerLogoName>
+            <ul>
+              <li className="partner-profile">
                 <div className="image-wrapper">
-                  <img src={`${ele.logo_url}`} />
+                  <img src={`${partner.data.attributes.logo_url}`} />
                 </div>
                 <div className="profile">
-                  <div className="name">VIAVI Solutions</div>
-                  <div className="description">
-                  </div>
+                  <div className="name">{partner.data.attributes.name}</div>
                 </div>
               </li>
-            )} */}
-          </ul>
-        </PartnerLogoName>
-        <ProductItem>
-          {/* {products.map((ele, index) =>
-            <li key={index}>
-              <div className="image-wrapper"><img src={`${ele.attributes.image_url}`} /></div>
-              <div className="name">{ele.attributes.name}</div>
-            </li>
-          )} */}
-        </ProductItem>
-      </main>
-      <div className="footer-section">
-        <Footer />
-      </div>
-    </ViaviWrapper>
-  )
+            </ul>
+          </PartnerLogoName>
+          <ProductItem>
+            {partner.included.map((ele, index) =>
+              <li key={index}>
+                <div className="image-wrapper"><img src={`${ele.attributes.image_url}`} /></div>
+                <div className="name">{ele.attributes.name}</div>
+              </li>
+            )}
+          </ProductItem>
+        </main>
+        <div className="footer-section">
+          <Footer />
+        </div>
+      </ViaviWrapper>
+    )
+  }
+  return <h2>No partners found for the name</h2>;
 }
 
-const mapStateToProps = (state) => ({
-  partners: state.partners,
-  products: state.products
-})
+const mapDispatchToProps = (dispatch) => ({
+  loadPartner: (url) => {
+    dispatch(getPartnerBySlug(url));
+  },
+});
 
-export default connect(mapStateToProps, null)(Viavi)
+const mapStateToProps = (state) => {
+  const { isFetching, partner } = state.partner
+  return {
+    partner,
+    isFetching
+  };
+}
+export default connect(mapStateToProps, mapDispatchToProps)(eporo)

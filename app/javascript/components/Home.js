@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import styled from 'styled-components'
 import Navigation from './Navigation/nav'
 import Footer from './footer'
@@ -161,7 +161,7 @@ const Advert = styled.div`
   }
 `
 
-const Home = () => {
+const Home = (props) => {
 
   const [isOpen, setOpen] = useState(false)
   const handleSubmit = () => {
@@ -176,7 +176,7 @@ const Home = () => {
   }
   return (
     <div>
-      <Navigation />
+      <Navigation {...props} />
       <main>
         <HeroSection>
           <QuotationForm />

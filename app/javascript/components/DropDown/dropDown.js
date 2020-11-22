@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
+import axios from 'axios'
 import {
   DropDownListContainer,
   DropDownContainer,
@@ -9,14 +10,15 @@ import {
   ListItem
 } from './styledDropDown'
 
-const dropDown = ({ partners }) => {
+
+const dropDown = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null)
 
   const toggling = () => {
-    console.log(partners)
     setIsOpen(!isOpen)
   }
+
 
   const onOptionClicked = partner => () => {
     setSelectedOption(partner)
@@ -29,11 +31,12 @@ const dropDown = ({ partners }) => {
       {isOpen && (
         <DropDownListContainer>
           <DropDownList>
-            {partners.map((partner, index) =>
-              <Link to={'/partners/viavi'} key={index}>
-                <ListItem onClick={onOptionClicked(partner)} key={index} className="partner-profile">
-                  {partner.name}
-                </ListItem>
+            {props.partners.map(partner =>
+              <Link key={partner.attributes.slug}
+                to={`/partners/${partner.attributes.slug}`}
+                onClick={onOptionClicked(partner.attributes.slug)}
+              >
+                <ListItem>{partner.attributes.name}</ListItem>
               </Link>
             )}
           </DropDownList>

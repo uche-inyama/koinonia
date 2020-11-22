@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Hamburger from './Hamburger'
@@ -38,14 +38,15 @@ const Nav = styled.nav`
     height: auto;
      }
 `
-const nav = () => {
+const nav = (props) => {
+
   return (
     <Nav>
       <div className="logo" style={{ backgroundImage: 'url("' + logoUrl + '")' }}></div>
       <ul className="nav-items">
         <Link to={'/'}>Home</Link>
         <Link to={'/about'}>About Us</Link>
-        <DropDown />
+        <DropDown {...props} />
         <Link to={'/clients'}>Clients</Link>
         <Link to={'/services'}>Services</Link>
         <Link to={'/news'}>News</Link>

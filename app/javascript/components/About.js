@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { useEffect, Fragment } from 'react'
 import styled from 'styled-components'
 import Navigation from './Navigation/nav'
 import Footer from './footer'
@@ -79,7 +79,8 @@ const Details = styled.li`
   }
 `;
 
-const About = () => {
+const About = (props) => {
+
   return (
     <AboutWrapper>
       <Navigation />
