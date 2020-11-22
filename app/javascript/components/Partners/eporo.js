@@ -77,6 +77,9 @@ const ProductItem = styled.ul`
     height: 250px;
     display: flex;
     align-items: center;
+    img {
+      width: 100%;
+    }
   }
   
   .description{
@@ -96,7 +99,8 @@ const ProductItem = styled.ul`
 `
 
 const eporo = ({ loadPartner, partner, isFetching }) => {
-  console.log(partner)
+  // console.log(partner)
+  // console.log(partner.data.attributes.logo_url)
 
   let { slug } = useParams();
   const url = `/api/v1/partners/${slug}`
@@ -128,6 +132,7 @@ const eporo = ({ loadPartner, partner, isFetching }) => {
           <ProductItem>
             {partner.included.map((ele, index) =>
               <li key={index}>
+                {console.log(ele)}
                 <div className="image-wrapper"><img src={`${ele.attributes.image_url}`} /></div>
                 <div className="name">{ele.attributes.name}</div>
               </li>

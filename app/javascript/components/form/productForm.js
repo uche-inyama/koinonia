@@ -21,6 +21,9 @@ const config = {
 const productForm = ({ onSubmitProductForm }) => {
 
   const [newProduct, setNewProduct] = useState({})
+
+  console.log(newProduct)
+
   const handleUpload = (e) => {
     ReactS3.uploadFile(e.target.files[0], config)
       .then((data) => {

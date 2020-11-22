@@ -18,7 +18,6 @@ export const postNewProduct = (data) => ({
   post: data
 })
 
-
 export const requestPartners = (data) => ({
   type: REQUEST_PARTNERS,
   partners: data
@@ -61,7 +60,6 @@ export const getPartners = () => {
   return dispatch => {
     axios.get(url)
       .then(response => dispatch(requestPartners(response.data.data)))
-
   }
 }
 
