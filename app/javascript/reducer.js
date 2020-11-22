@@ -4,8 +4,7 @@ import {
   RECEIVE_NEW_PRODUCT,
   REQUEST_PARTNERS,
   REQUEST_PRODUCTS,
-  REQUEST_PARTNER,
-  RECEIVE_PARTNER
+  REQUEST_PARTNER
 } from './action'
 
 const Partners = (state = [], action) => {
@@ -13,7 +12,7 @@ const Partners = (state = [], action) => {
     case RECEIVE_NEW_PARTNER:
       return [...state, action.post]
     case REQUEST_PARTNERS:
-      return action.partners
+      return [...state, action.partners]
     default:
       return state
   }

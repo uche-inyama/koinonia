@@ -19,11 +19,14 @@ export const postNewProduct = (data) => ({
 })
 
 
-export const requestPartners = (data) => ({
+export const requestPartners = () => ({
+  type: REQUEST_PARTNERS,
+})
+
+export const receivePartners = (data) => ({
   type: REQUEST_PARTNERS,
   partners: data
 })
-
 
 export const requestProducts = (data) => ({
   type: REQUEST_PRODUCTS,
@@ -59,8 +62,9 @@ export const receiveNewProduct = (data) => {
 export const getPartners = () => {
   const url = 'https://still-tor-28457.herokuapp.com/v1/partners'
   return dispatch => {
-    axios.get(url)
-      .then(response => dispatch(requestPartners(response.data.data)))
+    dispatch(requestPartners());
+    return axios.get(url)
+      .then(response => dispatch(receivePartners(response.data.data)))
 
   }
 }
@@ -78,7 +82,8 @@ export const getPartnerBySlug = (url) => {
   const fullUrl = `http://localhost:3000/${url}`
   return dispatch => {
     dispatch(requestPartner());
-    axios.get(fullUrl)
+    return axios
+      .get(fullUrl)
       .then(response => dispatch(receivePartner(response.data)))
     // .then(response => console.log(response.data))
   }
