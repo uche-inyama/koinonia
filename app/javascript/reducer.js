@@ -4,7 +4,8 @@ import {
   RECEIVE_NEW_PRODUCT,
   REQUEST_PARTNERS,
   REQUEST_PRODUCTS,
-  REQUEST_PARTNER
+  REQUEST_PARTNER,
+  RECEIVE_PARTNER
 } from './action'
 
 const Partners = (state = [], action) => {
