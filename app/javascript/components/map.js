@@ -8,9 +8,9 @@ const Map = (props) => {
     <div>
       <GoogleMap
         defaultZoom={10}
-        defaultCenter={{ lat: -33.935110, lng: 150.998200 }}
+        defaultCenter={{ lat: 30.126050, lng: 31.371310 }}
       >
-        {props.isMarkerShown && <Marker position={{ lat: -33.935110, lng: 150.998200 }} />}
+        {props.isMarkerShown && <Marker position={{ lat: 30.126050, lng: 31.371310 }} />}
       </GoogleMap>
     </div>
   );
