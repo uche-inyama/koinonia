@@ -11,8 +11,7 @@ import {
 } from './styledDropDown'
 
 
-const dropDown = ({ partners }) => {
-  console.log(partners)
+const dropDown = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null)
 
@@ -32,7 +31,7 @@ const dropDown = ({ partners }) => {
       {isOpen && (
         <DropDownListContainer>
           <DropDownList>
-            {partners.map(partner =>
+            {props.partners.map(partner =>
               <Link key={partner.attributes.slug}
                 to={`/partners/${partner.attributes.slug}`}
                 onClick={onOptionClicked(partner.attributes.slug)}

@@ -19,14 +19,11 @@ export const postNewProduct = (data) => ({
 })
 
 
-export const requestPartners = () => ({
-  type: REQUEST_PARTNERS,
-})
-
-export const receivePartners = (data) => ({
+export const requestPartners = (data) => ({
   type: REQUEST_PARTNERS,
   partners: data
 })
+
 
 export const requestProducts = (data) => ({
   type: REQUEST_PRODUCTS,
@@ -44,7 +41,7 @@ export const requestPartner = () => ({
 
 
 export const receiveNewPartner = (data) => {
-  const url = 'https://still-tor-28457.herokuapp.com/v1/partners'
+  const url = 'https://still-tor-28457.herokuapp.com/api/v1/partners'
   return dispatch => {
     axios.post(url, data)
       .then(response => dispatch(postNewPartner(response.data.data.attributes)))
@@ -52,7 +49,7 @@ export const receiveNewPartner = (data) => {
 }
 
 export const receiveNewProduct = (data) => {
-  const url = 'https://still-tor-28457.herokuapp.com/v1/products'
+  const url = 'https://still-tor-28457.herokuapp.com/api/v1/products'
   return dispatch => {
     axios.post(url, data)
       .then(response => dispatch(postNewProduct(response.data.data.attributes)))
@@ -60,17 +57,16 @@ export const receiveNewProduct = (data) => {
 }
 
 export const getPartners = () => {
-  const url = 'https://still-tor-28457.herokuapp.com/v1/partners'
+  const url = 'https://still-tor-28457.herokuapp.com/api/v1/partners'
   return dispatch => {
-    dispatch(requestPartners());
-    return axios.get(url)
-      .then(response => dispatch(receivePartners(response.data.data)))
+    axios.get(url)
+      .then(response => dispatch(requestPartners(response.data.data)))
 
   }
 }
 
 export const getProducts = () => {
-  const url = 'https://still-tor-28457.herokuapp.com/v1/products'
+  const url = 'https://still-tor-28457.herokuapp.com/api/v1/products'
   return dispatch => {
     axios.get(url)
       .then(response => dispatch(requestProducts(response.data.data)))
@@ -79,13 +75,11 @@ export const getProducts = () => {
 }
 
 export const getPartnerBySlug = (url) => {
-  const fullUrl = `http://localhost:3000/${url}`
+  const fullUrl = `https://still-tor-28457.herokuapp.com/${url}`
   return dispatch => {
     dispatch(requestPartner());
-    return axios
-      .get(fullUrl)
+    axios.get(fullUrl)
       .then(response => dispatch(receivePartner(response.data)))
-    // .then(response => console.log(response.data))
   }
 }
 

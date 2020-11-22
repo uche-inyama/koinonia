@@ -13,7 +13,7 @@ const Partners = (state = [], action) => {
     case RECEIVE_NEW_PARTNER:
       return [...state, action.post]
     case REQUEST_PARTNERS:
-      return [...state, action.partners]
+      return action.partners
     default:
       return state
   }
