@@ -78,8 +78,8 @@ const ProductItem = styled.ul`
     display: flex;
     align-items: center;
     img {
-      width: 100%;
-      height: 80%;
+      width: 80%;
+      height: 100%;
     }
   }
   
