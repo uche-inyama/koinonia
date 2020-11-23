@@ -105,7 +105,7 @@ const eporo = ({ loadPartner, partner, isFetching }) => {
   const url = `/api/v1/partners/${slug}`
   useEffect(() => {
     loadPartner(url)
-  }, [])
+  }, [slug])
 
   if (isFetching) {
     return <div className="status">loading...</div>

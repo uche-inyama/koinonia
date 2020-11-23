@@ -14,7 +14,7 @@ justify-content: center;
 align-items: center;
 font-family: 'Open Sans', sans-serif;
 .success {
-  position: relative;
+  position: absolute;
   bottom: 250px;
   left: 300px;
   margin-bottom: 10px;
