@@ -5,7 +5,9 @@ import {
   REQUEST_PARTNERS,
   REQUEST_PRODUCTS,
   REQUEST_PARTNER,
-  RECEIVE_PARTNER
+  RECEIVE_PARTNER,
+  RECEIVE_PRODUCT,
+  REQUEST_PRODUCT
 } from './action'
 
 const Partners = (state = [], action) => {
@@ -42,10 +44,22 @@ const Products = (state = [], action) => {
       return state
   }
 }
+
+const Product = (state = { isFetching: false, detail: null }, action) => {
+  switch (action.type) {
+    case REQUEST_PRODUCT:
+      return { ...state, isFetching: true }
+    case RECEIVE_PRODUCT:
+      return { ...state, isFetching: false, product: action.product }
+    default:
+      return state
+  }
+}
 const reducer = combineReducers({
   partners: Partners,
   products: Products,
-  partner: Partner
+  partner: Partner,
+  product: Product
 })
 
 export default reducer;

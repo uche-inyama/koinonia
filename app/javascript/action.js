@@ -6,6 +6,8 @@ export const REQUEST_PARTNERS = 'REQUEST_PARTNERS'
 export const REQUEST_PRODUCTS = 'REQUEST_PRODUCTS'
 export const REQUEST_PARTNER = 'REQUEST_PARTNER'
 export const RECEIVE_PARTNER = 'RECEIVE_PARTNER'
+export const REQUEST_PRODUCT = 'REQUEST_PRODUCT'
+export const RECEIVE_PRODUCT = 'RECEIVE_PRODUCT'
 
 
 export const postNewPartner = (data) => ({
@@ -38,6 +40,14 @@ export const requestPartner = () => ({
   type: REQUEST_PARTNER,
 })
 
+export const requestProduct = () => ({
+  type: REQUEST_PRODUCT,
+})
+
+export const receiveProduct = (data) => ({
+  type: RECEIVE_PRODUCT,
+  product: data
+})
 
 export const receiveNewPartner = (data) => {
   const url = 'https://koinonia-egypt.herokuapp.com/api/v1/partners'
@@ -78,6 +88,15 @@ export const getPartnerBySlug = (url) => {
     dispatch(requestPartner());
     axios.get(fullUrl)
       .then(response => dispatch(receivePartner(response.data)))
+  }
+}
+
+export const getProduct = (id) => {
+  const url = `https://koinonia-egypt.herokuapp.com/api/v1/products/${id}`
+  return dispatch => {
+    dispatch(requestProduct());
+    axios.get(url)
+      .then(response => dispatch(receiveProduct(response.data.data.attributes)))
   }
 }
 

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import styled from 'styled-components'
 import Navigation from '../Navigation/nav'
 import { getPartnerBySlug } from '../../action'
@@ -131,8 +131,8 @@ const eporo = ({ loadPartner, partner, isFetching }) => {
           <ProductItem>
             {partner.included.map((ele, index) =>
               <li key={index}>
-                {console.log(ele)}
-                <div className="image-wrapper"><img src={`${ele.attributes.image_url}`} /></div>
+                {console.log(ele.id)}
+                <Link to={`/products/${ele.id}`} className="image-wrapper"><img src={`${ele.attributes.image_url}`} /></Link>
                 <div className="name">{ele.attributes.name}</div>
               </li>
             )}
