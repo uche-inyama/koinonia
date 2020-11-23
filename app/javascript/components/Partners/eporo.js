@@ -79,6 +79,7 @@ const ProductItem = styled.ul`
     align-items: center;
     img {
       width: 100%;
+      height: 80%;
     }
   }
   
@@ -99,8 +100,6 @@ const ProductItem = styled.ul`
 `
 
 const eporo = ({ loadPartner, partner, isFetching }) => {
-  // console.log(partner)
-  // console.log(partner.data.attributes.logo_url)
 
   let { slug } = useParams();
   const url = `/api/v1/partners/${slug}`
