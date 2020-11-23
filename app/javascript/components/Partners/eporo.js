@@ -77,10 +77,10 @@ const ProductItem = styled.ul`
     height: 250px;
     display: flex;
     align-items: center;
-    // img {
-    //   width: 80%;
-    //   height: 100%;
-    // }
+    img {
+      width: 80%;
+      height: 100%;
+    }
   }
   
   .description{
