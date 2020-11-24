@@ -15,6 +15,9 @@ const Quotation = styled.div`
   align-items: center;
   font-family: 'Open Sans', sans-serif;
   .success {
+    background-color: green;
+    color: white;
+    padding: 5px 30px;
     margin-bottom: 10px;
     text-align: center;
     color: green;
