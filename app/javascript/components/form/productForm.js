@@ -14,15 +14,13 @@ const ProductFormWrapper = styled.div`
 const config = {
   bucketName: 'koinoniamaya',
   region: 'us-east-2',
-  accessKeyId: aws.AWSAccessKeyId,
-  secretAccessKey: aws.AWSSecretKey,
+  accessKeyId: process.env.REACT_APP_AWSAccessKeyId,
+  secretAccessKey: process.env.REACT_APP_AWSSecretKey
 }
 
 const productForm = ({ onSubmitProductForm }) => {
 
   const [newProduct, setNewProduct] = useState({})
-
-  console.log(newProduct)
 
   const handleUpload = (e) => {
     ReactS3.uploadFile(e.target.files[0], config)
