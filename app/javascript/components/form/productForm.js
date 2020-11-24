@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { connect } from 'react-redux'
 import ReactS3 from 'react-s3'
+import axios from 'axios'
 import { receiveNewProduct } from '../../action'
 
 
@@ -20,6 +21,8 @@ const config = {
 const productForm = ({ onSubmitProductForm }) => {
 
   const [newProduct, setNewProduct] = useState({})
+  const cloudName = 'ddcakt97r'
+  const url = `https://api.cloudinary.com/v1_1/${cloudName}/upload`
 
   const handleUpload = (e) => {
     ReactS3.uploadFile(e.target.files[0], config)
@@ -28,6 +31,23 @@ const productForm = ({ onSubmitProductForm }) => {
       })
       .catch(err => err)
   }
+
+
+  const imageSubmit = (e) => {
+    const cloudName = 'ddcakt97r'
+    const url = `https://api.cloudinary.com/v1_1/${cloudName}/upload`
+    const { files } = document.querySelector('input[type="file"]')
+    console.log('image file', files[0])
+    const formData = new FormData();
+    formData.append('file', files[0])
+    formData.append('upload_preset', 'koinonia')
+    axios.post(url, formData)
+      .then(response => {
+        setNewProduct(Object.assign({}, newProduct, { [e.target.name]: response.data.secure_url }));
+      })
+  }
+
+
 
   const handleChange = (e) => {
     setNewProduct(Object.assign({}, newProduct, { [e.target.name]: e.target.value }));
@@ -48,7 +68,7 @@ const productForm = ({ onSubmitProductForm }) => {
         </div>
         <div className="field">
           <label>Image</label>
-          <input type="file" name="image_url" onChange={handleUpload} />
+          <input type="file" name="image_url" onChange={imageSubmit} />
         </div>
         <div className="field">
           <label>Description</label>
