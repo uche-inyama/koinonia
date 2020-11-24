@@ -37,7 +37,6 @@ const productForm = ({ onSubmitProductForm }) => {
     const cloudName = 'ddcakt97r'
     const url = `https://api.cloudinary.com/v1_1/${cloudName}/upload`
     const { files } = document.querySelector('input[type="file"]')
-    console.log('image file', files[0])
     const formData = new FormData();
     formData.append('file', files[0])
     formData.append('upload_preset', 'koinonia')
