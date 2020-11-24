@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { connect } from 'react-redux'
 import ReactS3 from 'react-s3'
-import { aws } from '../keys'
 import { receiveNewPartner, removePartner } from '../../action'
 
 const PartnerFormWrapper = styled.div`
@@ -13,8 +12,8 @@ const PartnerFormWrapper = styled.div`
 const config = {
   bucketName: 'koinoniamaya',
   region: 'us-east-2',
-  accessKeyId: aws.AWSAccessKeyId,
-  secretAccessKey: aws.AWSSecretKey,
+  accessKeyId: process.env.REACT_APP_AWSAccessKeyId,
+  secretAccessKey: process.env.REACT_APP_AWSSecretKey
 }
 
 const partnerForm = ({ onSubmitClick, deleteClick }) => {
