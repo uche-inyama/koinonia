@@ -5,25 +5,23 @@ import axios from 'axios'
 
 
 const Quotation = styled.div`
-position: absolute;
-top: 180px;
-width: 100%;
-height: 600px;
-display: flex;
-justify-content: center;
-align-items: center;
-font-family: 'Open Sans', sans-serif;
-.success {
   position: absolute;
-  bottom: 250px;
-  left: 300px;
-  margin-bottom: 10px;
-  text-align: center;
-  color: green;
-  font-size: 1.2;
-  text-transform: uppercase;
+  top: 180px;
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
   font-family: 'Open Sans', sans-serif;
-}
+  .success {
+    margin-bottom: 10px;
+    text-align: center;
+    color: green;
+    font-size: 1.2;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+  }
 ul {
   list-style:none;
   padding-left: 0px;
@@ -75,10 +73,12 @@ const quotationForm = () => {
       input => (input.value = "")
     );
     setQuotation({})
-    setTimeout(reload(), 8000);
+    setTimeout(reload(), 12000);
   }
 
-  const reload = () => window.location.reload()
+  const reload = () => {
+    window.location.reload()
+  }
 
   const onSubmit = (e) => {
     axios.post('/api/v1/quotations', { quotation })
@@ -95,6 +95,7 @@ const quotationForm = () => {
   }
 
   return (
+
     <Quotation>
       {isSuccessfullySubmitted && (
         <div className="success">Form submitted successfully</div>
