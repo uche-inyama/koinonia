@@ -72,9 +72,11 @@ const quotationForm = () => {
 
 
   const handleReset = () => {
+    const form = document.querySelector('form');
     Array.from(document.querySelectorAll('.input-field')).forEach(
       input => (input.value = "")
     );
+    form.style.display = 'none'
     setQuotation({})
     // setTimeout(reload(), 24000);
   }
