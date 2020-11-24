@@ -73,7 +73,7 @@ const quotationForm = () => {
       input => (input.value = "")
     );
     setQuotation({})
-    setTimeout(reload(), 24000);
+    // setTimeout(reload(), 24000);
   }
 
   const reload = () => {
