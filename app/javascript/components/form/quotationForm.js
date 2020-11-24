@@ -20,7 +20,6 @@ const Quotation = styled.div`
     padding: 5px 30px;
     margin-bottom: 10px;
     text-align: center;
-    color: green;
     font-size: 1.2;
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
