@@ -1,4 +1,4 @@
 export const aws = {
-  AWSAccessKeyId: "AKIAJQKKPUPK2ZEW5XIQ",
-  AWSSecretKey: "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"
+  AWSAccessKeyId: "AKIAWD2MVUXDOCWSOYFO",
+  AWSSecretKey: "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"
 }
