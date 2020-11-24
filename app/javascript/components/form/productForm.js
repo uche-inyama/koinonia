@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { connect } from 'react-redux'
 import ReactS3 from 'react-s3'
-import { aws } from '../keys'
 import { receiveNewProduct } from '../../action'
 
 
