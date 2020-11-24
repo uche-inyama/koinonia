@@ -77,7 +77,7 @@ const quotationForm = () => {
     );
     form.style.display = 'none'
     setQuotation({})
-    setTimeout(reload(), 20000);
+    // setTimeout(reload(), 20000);
   }
 
   const reload = () => {
