@@ -5,17 +5,19 @@ import { getProduct } from '../../action'
 import styled from 'styled-components'
 
 
-const ProductDetail = styled.div`
-  width: 70%;
-  margin: 0 auto;
-  .list {
-    width: 500px;
-    margin 0 auto;
-    height: 400px;
-    img {
-      width: 100%;
-    } 
-  }
+const ProductDetail = styled.h2`
+  // width: 70%;
+  // margin: 0 auto;
+  // .list {
+  //   width: 500px;
+  //   margin 0 auto;
+  //   height: 400px;
+  //   img {
+  //     width: 100%;
+  //   } 
+  // }
+  text-align: center;
+  padding-top: 300px;
 `;
 
 
@@ -27,25 +29,25 @@ const productDetail = ({ fetchDetail, product, isFetching }) => {
     fetchDetail(id)
   }, [])
 
-  if (isFetching) {
-    return <div className="status">loading...</div>
-  }
-  if (product) {
-    return (
-      <ProductDetail>
-        <ul className="detail">
-          <li className="list">
-            <img src={`${product.image_url}`} />
-          </li>
-        </ul>
-        <p>{product.name}</p>
-        <p>
-          {product.description}
-        </p>
-      </ProductDetail>
-    )
-  }
-  return <h2>No product found</h2>;
+  // if (isFetching) {
+  //   return <div className="status">loading...</div>
+  // }
+  // if (product) {
+  //   return (
+  //     <ProductDetail>
+  //       <ul className="detail">
+  //         <li className="list">
+  //           <img src={`${product.image_url}`} />
+  //         </li>
+  //       </ul>
+  //       <p>{product.name}</p>
+  //       <p>
+  //         {product.description}
+  //       </p>
+  //     </ProductDetail>
+  //   )
+  // }
+  return <ProductDetail>No product details yet.</ProductDetail>;
 }
 
 const mapDispatchToProps = (dispatch) => ({
