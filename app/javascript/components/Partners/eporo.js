@@ -127,8 +127,7 @@ const eporo = ({ loadPartner, partner, isFetching }) => {
           <ProductItem>
             {partner.included.map((ele, index) =>
               <li key={index}>
-                {console.log(ele.id)}
-                <Link to={`/products/${ele.id}`} className="image-wrapper"><img src={`${ele.attributes.image_url}`} /></Link>
+                <div className="image-wrapper"><img src={`${ele.attributes.image_url}`} /></div>
                 <div className="name">{ele.attributes.name}</div>
               </li>
             )}
