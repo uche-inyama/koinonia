@@ -27,11 +27,14 @@ const Quotation = styled.div`
       color: #fff;
       display:inline-block;
       margin-left: 20px;
-      width: 18px;
       text-transform: lowercase;
       border: solid 1px gray;
       border-radius: 50%;
       cursor: pointer;
+    }
+    span:hover {
+      background-color: gray;
+      color: #fff;
     }
   }
 ul {

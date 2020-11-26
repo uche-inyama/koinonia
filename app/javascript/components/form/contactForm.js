@@ -114,7 +114,7 @@ const contactForm = () => {
             </div>
             <div className="field space">
               <input className="input-field"
-                ref={register({ required: true, minLength: 6, maxLength: 12 })}
+                ref={register({ required: true })}
                 type="text" name="subject"
                 onChange={handleChange}
                 placeholder="mobile number"
