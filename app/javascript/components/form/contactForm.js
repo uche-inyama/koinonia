@@ -105,7 +105,7 @@ const contactForm = () => {
           <li className="name-mobile">
             <div className="field">
               <input className="input-field"
-                ref={register({ required: true, maxLength: 20 })}
+                ref={register({ required: true })}
                 type="text" name="name" onChange={handleChange}
                 placeholder="name"
                 disabled={formState.isSubmitting}

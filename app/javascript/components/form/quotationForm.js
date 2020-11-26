@@ -130,7 +130,7 @@ const quotationForm = () => {
           <li className="name-mobile">
             <div className="field">
               <input className="input-field" type="text"
-                ref={register({ required: true, maxLength: 20 })}
+                ref={register({ required: true })}
                 name="first_name"
                 onChange={handleChange}
                 placeholder="First name"
@@ -142,7 +142,7 @@ const quotationForm = () => {
           <li>
             <div className="field space">
               <input className="input-field" type="text"
-                ref={register({ required: true, maxLength: 20 })}
+                ref={register({ required: true })}
                 name="last_name" onChange={handleChange}
                 placeholder="Last name"
                 disabled={formState.isSubmitting}
@@ -153,7 +153,7 @@ const quotationForm = () => {
           <li>
             <div className="field">
               <input className="input-field" type="text"
-                ref={register({ required: true, minLength: 6, maxLength: 12 })}
+                ref={register({ required: true })}
                 name="phone" onChange={handleChange}
                 placeholder="Phone"
                 disabled={formState.isSubmitting}
