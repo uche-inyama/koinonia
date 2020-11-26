@@ -27,6 +27,7 @@ const Quotation = styled.div`
       color: #fff;
       display:inline-block;
       margin-left: 20px;
+      width: 20px;
       text-transform: lowercase;
       border: solid 1px gray;
       border-radius: 50%;
