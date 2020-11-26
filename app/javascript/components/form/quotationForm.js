@@ -100,7 +100,6 @@ const quotationForm = () => {
 
   const handleCloseNotification = () => {
     window.location.reload()
-
   }
 
   const onSubmit = (e) => {

@@ -11,13 +11,30 @@ const Contactform = styled.div`
   font-family: 'Open Sans', sans-serif;
   text-transform: capitalize;
   .success {
-    position: relative;
+    background-color: green;
     bottom: 50px;
-    text-align: center;
-    color: green;
     font-size: 1.2;
-    text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
+    color: white;
+    margin-bottom: 10px;
+    padding: 5px 10px 5px 30px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    span {
+      color: #fff;
+      display:inline-block;
+      margin-left: 20px;
+      width: 20px;
+      text-transform: lowercase;
+      border: solid 1px gray;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    span:hover {
+      background-color: gray;
+      color: #fff;
+    }
   }
   .form-items-wrapper{
     display: flex;
@@ -95,10 +112,16 @@ const contactForm = () => {
     setContact(Object.assign({}, contact, { [e.target.name]: e.target.value }));
   }
 
+  const handleCloseNotification = () => {
+    window.location.reload()
+  }
+
   return (
     <Contactform>
       {isSuccessfullySubmitted && (
-        <div className="success">Form submitted successfully</div>
+        <div className="success">Form submitted successfully
+          <span onClick={handleCloseNotification}>{'x'}</span>
+        </div>
       )}
       <form onSubmit={handleSubmit(onSubmit)}>
         <ul className="form-items-wrapper">
