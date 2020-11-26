@@ -17,12 +17,22 @@ const Quotation = styled.div`
   .success {
     background-color: green;
     color: white;
-    padding: 5px 30px;
+    padding: 5px 10px 5px 30px;
     margin-bottom: 10px;
     text-align: center;
     font-size: 1.2;
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
+    span {
+      color: #fff;
+      display:inline-block;
+      margin-left: 20px;
+      width: 18px;
+      text-transform: lowercase;
+      border: solid 1px gray;
+      border-radius: 50%;
+      cursor: pointer;
+    }
   }
 ul {
   list-style:none;
@@ -84,6 +94,11 @@ const quotationForm = () => {
     window.location.reload()
   }
 
+  const handleCloseNotification = () => {
+    window.location.reload()
+
+  }
+
   const onSubmit = (e) => {
     axios.post('/api/v1/quotations', { quotation })
       .then(res => {
@@ -102,7 +117,9 @@ const quotationForm = () => {
 
     <Quotation>
       {isSuccessfullySubmitted && (
-        <div className="success">Form submitted successfully</div>
+        <div className="success">Form submitted successfully
+          <span onClick={handleCloseNotification}>{'x'}</span>
+        </div>
       )}
       <form onSubmit={handleSubmit(onSubmit)}>
         <ul className="form-items-wrapper">
