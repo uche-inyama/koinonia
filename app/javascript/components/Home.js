@@ -49,26 +49,24 @@ const HeroSection = styled.div`
   }
 `;
 
-
 const OurEvents = styled.div`
-justify-content: space-around;
-height: 1000px;
-font-family: 'Open Sans', sans-serif;
-.event-title {
-  padding: 25px 0;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  h4 {
-    padding: 20px;
-    border-radius: 5px;
-    background-color: #f7dcdc;
-    color: red;
-    font-size: 0.9em; 
-    text-transform: capitalize;
+  justify-content: space-around;
+  font-family: 'Open Sans', sans-serif;
+  .event-title {
+    padding: 25px 0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h4 {
+      padding: 20px;
+      border-radius: 5px;
+      background-color: #f7dcdc;
+      color: red;
+      font-size: 0.9em; 
+      text-transform: capitalize;
+    }
   }
-}
   .event-one {
     display: flex;
     justify-content: space-evenly;
@@ -110,7 +108,7 @@ font-family: 'Open Sans', sans-serif;
 `;
 
 const Advert = styled.div`
-  height: 500px;
+  height: 350px;
   .advert-image-wrapper {
     background-repeat: no-repeat;
     background-position: center;
@@ -129,9 +127,9 @@ const Advert = styled.div`
       align-items: center;
       position: relative;
       left: 120px;
-      top: 50px;
+      top: 70px;
       border: 6px solid white;
-      height: 350px;
+      height: 200px;
       width: 80%;
       opacity: 1;
       h2 {

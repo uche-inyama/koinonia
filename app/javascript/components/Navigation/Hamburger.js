@@ -7,7 +7,7 @@ const StyledBurger = styled.div`
   width: 2rem;
   height: 2rem;
   position: fixed;
-  top: 15px;
+  top: 30px;
   right: 20px;
   display: flex;
   justify-content: space-around;
@@ -34,9 +34,9 @@ const StyledBurger = styled.div`
         transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
       }
     }
-    @media(min-width: 1024px){
-      display: none;
-    }
+    // @media(min-width: 768px){
+    //   display: block;
+    // }
 `
 
 const Hamburger = () => {

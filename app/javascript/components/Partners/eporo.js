@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { connect } from 'react-redux'
+import { connect, useSelector, useDispatch } from 'react-redux'
 import { useParams, Link } from 'react-router-dom'
 import styled from 'styled-components'
 import Navigation from '../Navigation/nav'
@@ -50,23 +50,23 @@ const PartnerLogoName = styled.div`
         margin-left: 20px;
       }
     }
-    @media(max-width: 997px){
-      .profile {
-        margin-left: 20px;
-      }
-    }
+    // @media(max-width: 997px){
+    //   .profile {
+    //     margin-left: 20px;
+    //   }
+    // }
   }
 `;
 
 const ProductItem = styled.ul`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 350px 350px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 400px);
   grid-gap: 50px;
   justify-content: center;
   padding: 0 20px;
   list-style: none;
-  li {
+  a {
     box-shadow: 0 0 5px 0  grey, 0 0 5px -5px #505f79;
     border-radius: 5px;
   }
@@ -74,7 +74,7 @@ const ProductItem = styled.ul`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 250px;
+    height: 350px;
     display: flex;
     align-items: center;
   }
@@ -85,22 +85,26 @@ const ProductItem = styled.ul`
    line-height: 1.2
   }
   .name {
-    padding: 10px 0;
+    color: #000;
+    height: 50px;
     font-size: 1.2em;
     text-align: center;
   }
 
-  @media(max-width: 997px){
-    grid-template-columns: repeat(2, 1fr);
-  }
+  // @media(max-width: 997px){
+  //   grid-template-columns: repeat(2, 1fr);
+  // }
 `
 
-const eporo = ({ loadPartner, partner, isFetching }) => {
+const eporo = ({ loadPartner }) => {
+  const partner = useSelector((state) => state.partner.partner)
+  const isFetching = useSelector((state) => state.partner.isFetching)
+  const dispatch = useDispatch()
 
   let { slug } = useParams();
   const url = `/api/v1/partners/${slug}`
   useEffect(() => {
-    loadPartner(url)
+    dispatch(getPartnerBySlug(url))
   }, [slug])
 
   if (isFetching) {
@@ -126,33 +130,33 @@ const eporo = ({ loadPartner, partner, isFetching }) => {
           </PartnerLogoName>
           <ProductItem>
             {partner.included.map((ele, index) =>
-              <li key={index}>
+              <Link to={`/products/:id`} key={index}>
                 <div className="image-wrapper"><img src={`${ele.attributes.image_url}`} /></div>
                 <div className="name">{ele.attributes.name}</div>
-              </li>
+              </Link>
             )}
           </ProductItem>
         </main>
         <div className="footer-section">
           <Footer />
         </div>
-      </ViaviWrapper>
+      </ViaviWrapper >
     )
   }
   return <h2>No partners found for the name</h2>;
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  loadPartner: (url) => {
-    dispatch(getPartnerBySlug(url));
-  },
-});
+// const mapDispatchToProps = (dispatch) => ({
+//   loadPartner: (url) => {
+//     dispatch(getPartnerBySlug(url));
+//   },
+// });
 
-const mapStateToProps = (state) => {
-  const { isFetching, partner } = state.partner
-  return {
-    partner,
-    isFetching
-  };
-}
-export default connect(mapStateToProps, mapDispatchToProps)(eporo)
+// const mapStateToProps = (state) => {
+//   const { isFetching, partner } = state.partner
+//   return {
+//     partner,
+//     isFetching
+//   };
+// }
+export default eporo

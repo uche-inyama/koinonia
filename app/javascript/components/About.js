@@ -1,4 +1,4 @@
-import React, { useEffect, Fragment } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Navigation from './Navigation/nav'
 import Footer from './footer'
@@ -7,6 +7,9 @@ import Footer from './footer'
 const AboutWrapper = styled.div`
   position: relative;
   top: 50px;
+  main {
+    height: 1100px;
+  }
   .footer-section {
     margin-top: 40px;
   }
@@ -24,29 +27,31 @@ const HeroSection = styled.div`
 
 const Ul = styled.ul`
   display: grid;
-  grid-template-columns: 500px 500px;
+  grid-template-columns: 400px 400px;
   grid-gap: 30px;
-  grid-template-rows: repeat(1, 400px);
+  grid-template-rows: repeat(1, 350px);
   list-style: none;
   margin-top: 100px;
-  @media(max-width: 1024px){
-    grid-template-columns: 400px 400px;
+  position: relative;
+  .active {
+    display: block;
+    height: 600px;
+    position: absolute;
+    z-index: 10;
+    width: 50%;
+    left: 450px;
+    box-shadow: 0 0 10px 0 grey;
+    padding: 10px;
+    line-height: 1.5
   }
- 
 `;
 const ImageWrapper = styled.li`
   border-radius: 20px;
   position: relative;
   z-index: 1;
   img {
-    width: 500px;
-    height: 450px;
-  }
-  @media(max-width: 1024px){
-    img {
-      width: 400px;
-      height: 350px;
-    }
+    width: 400px;
+    height: 350px;
   }
 `;
 
@@ -77,22 +82,55 @@ const Details = styled.li`
       width: 75px;
     }
   }
+  strong {
+    padding: 5px;
+    font-weight: 700;
+  }
 `;
 
+const AllDetails = styled.li`
+  display: none;
+  span {
+    border-bottom: solid 2px red;
+    padding-bottom: 5px;
+  }
+`;
+
+
 const About = (props) => {
+
+  const readMore = () => {
+    const details = document.querySelector('.details')
+    const allDetails = document.querySelector('.all-details')
+    const aboutMeaning = document.querySelector('.about-meaning')
+    details.style.display = 'none'
+    allDetails.classList.remove('all-details')
+    allDetails.classList.add('active')
+    aboutMeaning.style.gridTemplateRows = "550px"
+
+  }
 
   return (
     <AboutWrapper>
       <Navigation />
       <main>
         <HeroSection>
-          <Ul>
+          <Ul className="about-meaning">
             <ImageWrapper>
               <img src="https://koinoniamaya.s3.us-east-2.amazonaws.com/network-digital-hologram-internet-things-city-background-5g-network-wireless-systems.png" alt="aboutImage" />
             </ImageWrapper>
-            <Details>
+            <Details className="details">
               <span>Meaning</span>
               <p>Koinonia is a leading Network Solutions provider and Distribution Company located in Australia with
+              wide regional presence in Egypt and the Middle East.
+              Our independent Australian ownership puts us in a unique position to offer our integration and installation partners and customers a best-in-class solution.
+              We are exclusive agents for optical tools and equipment from around the world, and bring them to you backed with full local after sales services, warranty and technical support.
+              <strong onClick={readMore}>Read More</strong>
+              </p>
+            </Details>
+            <AllDetails className="all-details">
+              <span>Meaning</span>
+              <p style={{ marginTop: '20px' }}>Koinonia is a leading Network Solutions provider and Distribution Company located in Australia with
               wide regional presence in Egypt and the Middle East.
               Our independent Australian ownership puts us in a unique position to offer our integration and installation partners and customers a best-in-class solution.
               We are exclusive agents for optical tools and equipment from around the world, and bring them to you backed with full local after sales services, warranty and technical support.
@@ -100,13 +138,13 @@ const About = (props) => {
               <p>Our buying power allows us to offer major brands at highly competitive prices, regardless of the size of the client’s purchase order.
               We also help our clients increase invoice value by keeping abreast of new technologies that allow the job to be done faster, better and cheaper.
               Our support has helped many small businesses scale successfully as we select products based on our client’s requirements (not cosy vendor partnerships). This means our vendors react to the market instead of dictating it.
-              </p>
+                </p>
               <p>
                 Over the years Koinonia have been entrusted with the supply, design and support services for some of Australia’s and Egypt’s largest infrastructure
                 and telecommunications projects and a multitude of industries including:
                 Mining, Utility, Telecommunications, Education, Government, Construction and Enterprise market segments.
-              </p>
-            </Details>
+                </p>
+            </AllDetails>
           </Ul>
           <Ul>
             <Details>
