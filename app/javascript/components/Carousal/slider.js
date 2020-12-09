@@ -12,7 +12,6 @@ const Slider = styled.div`
 `
 
 const slider = (props) => {
-  // const getWidth = () => window.innerWidth
   const width = 210
   const [state, setState] = useState({
     activeIndex: 0,

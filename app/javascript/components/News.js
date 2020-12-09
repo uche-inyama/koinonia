@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Navigation from './Navigation/nav'
 import styled from 'styled-components'
-import Footer from './footer'
+import Footer from './Footer/footer'
 
 const OurEvents = styled.div`
 position: relative;

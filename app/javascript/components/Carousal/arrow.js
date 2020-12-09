@@ -1,34 +1,9 @@
 /** @jsx jsx */
-
 import React from 'react'
-import styled from 'styled-components'
 import { css, jsx } from '@emotion/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-
-// const ArrowWrapper = styled.div`
-//   display: flex;
-//   position: absolute;
-//   top: 50%;
-//   ${direction === 'right' ? `right: 25px` : `left: 25px`};
-//   height: 50px;
-//   width: 50px;
-//   justify-content: center;
-//   background: #fff;
-//   border-radius: 50%;
-//   cursor: pointer;
-//   transition: transform ease-in 0.1s;
-//   &:hover {
-//     transform: scale(1.1);
-//   }
-//   FontAwesomeIcon {
-//     transform: translateX(${direction === 'left' ? '-2' : '2'}px);
-//     &:focus {
-//       outline: 0;
-//     }    
-//   }
-// `
 const Arrow = ({ direction, handleClick }) => (
   <div
     onClick={handleClick}

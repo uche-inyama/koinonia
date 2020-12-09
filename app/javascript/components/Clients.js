@@ -2,7 +2,7 @@ import React from 'react'
 import Navigation from './Navigation/nav'
 import styled from 'styled-components'
 import { zte, uplink, sky, protech, optimum, etisalat, elsewedy, alhamd } from './imageUrl'
-import Footer from './footer'
+import Footer from './Footer/footer'
 import Slider from './Carousal/slider'
 
 const ClientsWrapper = styled.div`
@@ -35,41 +35,7 @@ const Clients = () => {
           Over the years, we have amassed many happy customers and that is because of
           the quality of our products and for providing the lightning support they deserve
         </p>
-
         <Slider slides={images} />
-
-        {/* <div className="slide">
-          <ul className="clients-logo">
-            <li className="image-wrapper">
-              <img src={`${zte}`} />
-            </li>
-            <li className="image-wrapper">
-              <img src={`${uplink}`} />
-            </li>
-            <li className="image-wrapper" >
-              <img src={`${sky}`} />
-
-            </li>
-            <li className="image-wrapper">
-              <img src={`${protech}`} />
-            </li>
-            <li className="image-wrapper" >
-              <img src={`${optimum}`} />
-
-            </li>
-            <li className="image-wrapper" >
-              <img src={`${etisalat}`} />
-
-            </li>
-            <li className="image-wrapper" >
-              <img src={`${elsewedy}`} />
-
-            </li>
-            <div className="image-wrapper" >
-              <img src={`${alhamd}`} />
-            </div>
-          </ul>
-        </div> */}
       </ClientsWrapper>
       <Footer />
     </div>

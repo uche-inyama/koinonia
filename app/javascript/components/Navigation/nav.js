@@ -13,6 +13,7 @@ const Nav = styled.div`
   position: fixed;
   top: 0px;
   z-index: 20;
+  box-shadow: 0 0 2px 0  grey;
   .logo {
     background-repeat: no-repeat;
     background-position: center;
@@ -20,34 +21,44 @@ const Nav = styled.div`
     width: 250px;
     height: 100px;
      }
+  @media (min-width: 1024px){
+    display: flex;
+    .logo {
+      margin-right: 100px;
+    }
+  }
 `
 
 const NavItems = styled.nav`
   display: none;
   height: 100%;
-//   width: 100%;
-//   border-bottom: 2px solid #f1f1f1;
-//   background-color: #fff;
-//   padding: 0 50px;
-//   display: flex;
-//   justify-content: space-between;
-//   font-family: 'Open Sans', sans-serif;
-//   
-//   .nav-items {
-//     display: flex;
-//     justify-content: space-around;
-//     list-style: none;
-//     width: 70%;
-//     padding: 0 10px;
-//     align-items: center;
-//     a {
-//       color: #8c8c88;
-//       text-decoration: none;  
-//       font-size: 1.2em;
-//     }
-//   }
-//   
-// `
+  @media (min-width: 1024px){
+    display: block;
+    // width: 70%;
+    // border-bottom: 2px solid #f1f1f1;
+    // background-color: #fff;
+    // padding: 0 50px;
+    // display: flex;
+    // justify-content: space-between;
+    // font-family: 'Open Sans', sans-serif;
+    
+    // .nav-items {
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+      width: 70%;
+      padding: 0 10px;
+      align-items: center;
+      a {
+        color: #8c8c88;
+        text-decoration: none;  
+        font-size: 1.2em;
+      }
+    // }
+  }
+ 
+  
+`
 const nav = (props) => {
 
   return (

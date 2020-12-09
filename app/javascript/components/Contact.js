@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Navigation from './Navigation/nav'
 import ContactForm from './form/contactForm'
 import { contactImage } from './imageUrl'
-import Footer from './footer'
+import Footer from './Footer/footer'
 
 const ContactWrapper = styled.div`
   position: relative;

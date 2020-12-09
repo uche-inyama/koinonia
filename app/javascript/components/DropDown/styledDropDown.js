@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
-export const DropDownContainer = styled.div`
-  // width: 5em;
-`;
+export const DropDownContainer = styled.div``;
 
 export const DropDownHeader = styled.div`
   font-weight: 500;
@@ -11,11 +9,13 @@ export const DropDownHeader = styled.div`
   padding: 10px;
   font-size: 2em;
   cursor: pointer;
+  @media(min-width:1024px){
+    font-size: 1.2rem;
+    color: grey;
+  }
 `;
 
-export const DropDownListContainer = styled.div`
-
-`;
+export const DropDownListContainer = styled.div``;
 
 export const DropDownList = styled.ul`
   background-color: white;
