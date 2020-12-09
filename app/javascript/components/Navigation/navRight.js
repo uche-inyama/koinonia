@@ -40,7 +40,7 @@ const navRight = (props) => {
       <li><Link to={'/about'}>About</Link></li>
       <DropDown {...props} />
       <li><Link to={'/clients'}>Clients</Link></li>
-      <li><Link to={'/services'}>Services</Link></li>
+      {/* <li><Link to={'/services'}>Services</Link></li> */}
       <li><Link to={'/contact'}>Contact</Link></li>
     </Ul>
   )

@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import Navigation from '../Navigation/nav'
 import Footer from '../Footer/footer'
-import { heroUrl } from '../imageUrl'
-import { advert } from '../imageUrl'
 import QuotationForm from '../form/quotationForm'
 import { HeroSection, OurEvents, Advert } from './styledHome'
 
