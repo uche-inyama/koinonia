@@ -29,6 +29,7 @@ export const DropDownList = styled.ul`
   box-sizing: border-box;
   font-size: 0.8em;
   width: 300px;
+  list-style: none;
   &:first-child {
     padding-top: 0.8em;
   }

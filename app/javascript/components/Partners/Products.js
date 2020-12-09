@@ -1,20 +1,19 @@
 import React, { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { connect } from 'react-redux'
 import { useParams, Link } from 'react-router-dom'
+import styled from 'styled-components'
 import Navigation from '../Navigation/nav'
 import { getPartnerBySlug } from '../../action'
 import Footer from '../Footer/footer'
-import { ProductWrapper, PartnerLogoName, ProductItem } from './styledProduct'
+import { PartnerLogoName, ProductItem, ProductWrapper } from './styledProduct'
 
-const product = () => {
-  const partner = useSelector((state) => state.partner.partner)
-  const isFetching = useSelector((state) => state.partner.isFetching)
-  const dispatch = useDispatch()
+
+const Product = ({ partner, isFetching, loadPartner }) => {
 
   let { slug } = useParams();
   const url = `/api/v1/partners/${slug}`
   useEffect(() => {
-    dispatch(getPartnerBySlug(url))
+    loadPartner(url)
   }, [slug])
 
   if (isFetching) {
@@ -56,4 +55,17 @@ const product = () => {
   return <h2>No partners found for the name</h2>;
 }
 
-export default product
+const mapDispatchToProps = (dispatch) => ({
+  loadPartner: (url) => {
+    dispatch(getPartnerBySlug(url));
+  },
+});
+
+const mapStateToProps = (state) => {
+  const { isFetching, partner } = state.partner
+  return {
+    partner,
+    isFetching
+  };
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Product)
