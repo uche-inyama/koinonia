@@ -83,7 +83,7 @@ export const getProducts = () => {
 }
 
 export const getPartnerBySlug = (url) => {
-  const fullUrl = `http://localhost:3000/${url}`
+  const fullUrl = `https://koinonia-egypt.herokuapp.com/${url}`
   return dispatch => {
     dispatch(requestPartner());
     axios.get(fullUrl)
