@@ -9,7 +9,7 @@ import { PartnerLogoName, ProductItem, ProductWrapper } from './styledProduct'
 
 
 const Product = ({ partner, isFetching, loadPartner }) => {
-
+  console.log(partner)
   let { slug } = useParams();
   const url = `/api/v1/partners/${slug}`
   useEffect(() => {

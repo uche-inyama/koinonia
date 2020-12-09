@@ -50,7 +50,7 @@ export const receiveProduct = (data) => ({
 })
 
 export const receiveNewPartner = (data) => {
-  const url = 'https://koinonia-egypt.herokuapp.com/v1/partners'
+  const url = 'https://koinonia-egypt.herokuapp.com/api/v1/partners'
   return dispatch => {
     axios.post(url, data)
       .then(response => dispatch(postNewPartner(response.data.data.attributes)))
@@ -58,7 +58,7 @@ export const receiveNewPartner = (data) => {
 }
 
 export const receiveNewProduct = (data) => {
-  const url = 'https://koinonia-egypt.herokuapp.com/v1/products'
+  const url = 'https://koinonia-egypt.herokuapp.com/api/v1/products'
   return dispatch => {
     axios.post(url, data)
       .then(response => dispatch(postNewProduct(response.data.data.attributes)))
@@ -66,7 +66,7 @@ export const receiveNewProduct = (data) => {
 }
 
 export const getPartners = () => {
-  const url = 'https://koinonia-egypt.herokuapp.com/v1/partners'
+  const url = 'https://koinonia-egypt.herokuapp.com/api/v1/partners'
   return dispatch => {
     axios.get(url)
       .then(response => dispatch(requestPartners(response.data.data)))
@@ -74,7 +74,7 @@ export const getPartners = () => {
 }
 
 export const getProducts = () => {
-  const url = 'https://koinonia-egypt.herokuapp.com/v1/products'
+  const url = 'https://koinonia-egypt.herokuapp.com/api/v1/products'
   return dispatch => {
     axios.get(url)
       .then(response => dispatch(requestProducts(response.data.data)))
@@ -92,7 +92,7 @@ export const getPartnerBySlug = (url) => {
 }
 
 export const getProduct = (id) => {
-  const url = `https://koinonia-egypt.herokuapp.com/v1/products/${id}`
+  const url = `https://koinonia-egypt.herokuapp.com/api/v1/products/${id}`
   return dispatch => {
     dispatch(requestProduct());
     axios.get(url)
