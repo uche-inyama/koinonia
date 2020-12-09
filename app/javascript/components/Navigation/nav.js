@@ -34,15 +34,6 @@ const NavItems = styled.nav`
   height: 100%;
   @media (min-width: 1024px){
     display: block;
-    // width: 70%;
-    // border-bottom: 2px solid #f1f1f1;
-    // background-color: #fff;
-    // padding: 0 50px;
-    // display: flex;
-    // justify-content: space-between;
-    // font-family: 'Open Sans', sans-serif;
-    
-    // .nav-items {
       display: flex;
       justify-content: space-around;
       list-style: none;
@@ -54,10 +45,7 @@ const NavItems = styled.nav`
         text-decoration: none;  
         font-size: 1.2em;
       }
-    // }
   }
- 
-  
 `
 const nav = (props) => {
 
@@ -69,7 +57,7 @@ const nav = (props) => {
         <Link to={'/about'}>About Us</Link>
         <DropDown {...props} />
         <Link to={'/clients'}>Clients</Link>
-        <Link to={'/services'}>Services</Link>
+        {/* <Link to={'/services'}>Services</Link> */}
         <Link to={'/news'}>News</Link>
         <Link to={'/contact'}>Contact Us</Link>
         {/* <Link to={'#'}>search</Link> */}
