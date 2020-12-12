@@ -8,6 +8,7 @@ const Ul = styled.ul`
   flex-flow: column nowrap;
   background-color: #fff;
   box-shadow:  0 4px 5px -2px gray;
+  list-style: none;
   position: fixed;
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
   top: 0;

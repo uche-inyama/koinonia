@@ -46,8 +46,6 @@ const productForm = ({ onSubmitProductForm }) => {
       })
   }
 
-
-
   const handleChange = (e) => {
     setNewProduct(Object.assign({}, newProduct, { [e.target.name]: e.target.value }));
   }
