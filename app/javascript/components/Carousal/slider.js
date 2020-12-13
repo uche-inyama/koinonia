@@ -52,10 +52,11 @@ const slider = (props) => {
           <Slide key={slide} content={slide} />
         ))}
       </SliderContent>
-      <Arrow direction="left" handleClick={nextSlide} />
-      <Arrow direction="right" handleClick={prevSlide} />
+      <Arrow direction="left" handleClick={prevSlide} />
+      <Arrow direction="right" handleClick={nextSlide} />
     </Slider>
   )
 }
+
 
 export default slider
