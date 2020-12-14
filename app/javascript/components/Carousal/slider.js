@@ -9,6 +9,11 @@ const Slider = styled.div`
   width: 100%;
   position: relative;
   overflow: hidden; 
+  .image-wrapper {
+    img {
+      width: 150px;
+    }
+  }
 `
 
 const slider = (props) => {
@@ -43,13 +48,13 @@ const slider = (props) => {
   }
 
   return (
-    <Slider>
+    <Slider className="slider">
       <SliderContent translate={translate}
         transition={transition}
         width={width * props.slides.length}
       >
         {props.slides.map(slide => (
-          <Slide key={slide} content={slide} />
+          <Slide key={slide.id} content={slide} slug={props.slug} />
         ))}
       </SliderContent>
       <Arrow direction="left" handleClick={prevSlide} />

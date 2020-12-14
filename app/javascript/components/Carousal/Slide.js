@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const Clients = styled.div`
   display: flex;
@@ -17,17 +18,36 @@ const Clients = styled.div`
     text-align: center;
     width: 170px;
     height: 150px;
+    .client {
+      width: 80px;
+    }
+    .One.Expert {
+      height: 256px;
+    }
   }
-
 `
 
-const Slide = ({ content }) => (
-  <Clients>
-    <li className="image-wrapper">
-      <img src={`${content}`} />
-    </li>
-  </Clients>
-)
+const Slide = ({ content, slug }) => {
+  if (slug) {
+    return (
+      <Clients>
+        <li className="image-wrapper">
+          <Link to={`/products/${slug}/${content.id}`}>
+            <img className={`${content.attributes.name} product`} src={`${content.attributes.image_url}`} />
+          </Link>
+        </li>
+      </Clients>
+    )
+  } else {
+    return (
+      <Clients>
+        <li className="image-wrapper">
+          <img className="client product" src={`${content}`} />
+        </li>
+      </Clients>
+    )
+  }
+}
 
 export default Slide;
 

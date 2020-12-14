@@ -45,7 +45,7 @@ const Products = (state = [], action) => {
   }
 }
 
-const Product = (state = { isFetching: false, detail: null }, action) => {
+const Product = (state = { isFetching: false, product: null }, action) => {
   switch (action.type) {
     case REQUEST_PRODUCT:
       return { ...state, isFetching: true }

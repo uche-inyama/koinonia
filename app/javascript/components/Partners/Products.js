@@ -9,7 +9,6 @@ import { PartnerLogoName, ProductItem, ProductWrapper } from './styledProduct'
 
 
 const Product = ({ partner, isFetching, loadPartner }) => {
-  console.log(partner)
   let { slug } = useParams();
   const url = `/api/v1/partners/${slug}`
   useEffect(() => {
@@ -39,7 +38,7 @@ const Product = ({ partner, isFetching, loadPartner }) => {
           </PartnerLogoName>
           <ProductItem>
             {partner.included.map((ele, index) =>
-              <Link to={`/products/:id`} key={index}>
+              <Link to={`/products/${slug}/${ele.id}`} key={index}>
                 <div className="image-wrapper"><img src={`${ele.attributes.image_url}`} /></div>
                 <div className="name">{ele.attributes.name}</div>
               </Link>

@@ -6,11 +6,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Arrow = ({ direction, handleClick }) => (
   <div
+    className="arrow"
     onClick={handleClick}
     css={css`
     display: flex;
     position: absolute;
-    top: 20%;
+    top: 30%;
     right: 1px;
     ${direction === 'right' ? `right: 0px` : `left: 0px`};
     height: 50px;

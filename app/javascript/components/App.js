@@ -19,7 +19,7 @@ const App = ({ loadPartners, loadProducts }) => {
 
   useEffect(() => {
     loadPartners();
-    loadProducts();
+    // loadProducts();
   }, [])
 
   return (
@@ -27,7 +27,7 @@ const App = ({ loadPartners, loadProducts }) => {
       <Route excat path="/about" component={About}></Route>
       <Route excat path="/contact" component={Contact}></Route>
       <Route excat path="/partners/:slug" component={Products}></Route>
-      <Route excat path="/products/:id" component={ProductDetail}></Route>
+      <Route excat path="/products/:slug/:id/" component={ProductDetail}></Route>
       <Route excat path="/clients" component={Clients}></Route>
       <Route excat path="/services" component={Services}></Route>
       <Route excat path="/news" component={News}></Route>
