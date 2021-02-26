@@ -6,6 +6,9 @@ services:
     volumes: 
       - .:/app
       - bundle-volume:/usr/local/bundle
+      - yarn-volume:/app/node_modules
+    ports:
+      - "3000:3000"
     depends_on:
       - db
 
@@ -14,11 +17,12 @@ services:
     volumes:
       - db-volume:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - "5000:5432"
     environment:
       POSTGRES_PASSWORD:  password123
 
 volumes:
   db-volume: 
   bundle-volume:
+  yarn-volume:
 
