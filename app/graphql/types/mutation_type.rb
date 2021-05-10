@@ -6,5 +6,6 @@ module Types
     def test_field
       "Hello World"
     end
+   field :add_contact, mutation: Mutations::AddContact
   end
 end

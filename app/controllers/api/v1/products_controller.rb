@@ -16,7 +16,7 @@ module Api
       end
 
       def create
-        debugger
+        # debugger
         product = Product.new(product_params)
 
         if product.save

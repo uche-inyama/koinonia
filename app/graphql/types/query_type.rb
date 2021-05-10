@@ -13,5 +13,14 @@ module Types
     def test_field
       "Hello World!"
     end
+    # field :fetch_products, resolver: Queries::FetchProducts
+    field :fetch_contacts, resolver: Queries::FetchContacts
+    field :fetch_contact, resolver: Queries::FetchContact
+    field :fetch_Quotations, resolver: Queries::FetchQuotations
+    field :fetch_Quotation, resolver: Queries::FetchQuotation
+    field :fetch_products, resolver: Queries::FetchProducts
+    field :fetch_product, resolver: Queries::FetchProduct
+    field :fetch_partner, resolver: Queries::FetchPartner
+    field :fetch_partners, resolver: Queries::FetchPartners
   end
 end

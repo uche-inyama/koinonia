@@ -5,15 +5,9 @@ module Types
     field :email, String, null: true
     field :subject, String, null: true
     field :message, String, null: true
+
+    field :created_at, GraphQL::Types::ISO8601DateTime, null: false
+    field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
   end
 end
 
-
-create_table "contacts", force: :cascade do |t|
-  t.string "name"
-  t.string "email"
-  t.text "subject"
-  t.text "message"
-  t.datetime "created_at", precision: 6, null: false
-  t.datetime "updated_at", precision: 6, null: false
-end

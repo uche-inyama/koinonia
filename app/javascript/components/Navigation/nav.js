@@ -57,7 +57,11 @@ const nav = (props) => {
         <Link to={'/'}>Home</Link>
         {/* <Link to={'/about'}>About Us</Link> */}
         <DropDown {...props} />
+<<<<<<< HEAD
         {/* <Link to={'/clients'}>Clients</Link> */}
+=======
+        <Link to={'/clients'}>Clients</Link>
+>>>>>>> 8afcba2fd074ba245d96e39d1970086e3df12ac0
         <Link to={'/services'}>Services</Link>
         <Link to={'/news'}>News</Link>
         <Link to={'/contact'}>Contact Us</Link>
