@@ -48,7 +48,7 @@ const Product = ({ partner, isFetching, loadPartner }) => {
         <div className="footer-section">
           <Footer />
         </div>
-      </ProductWrapper >
+      </ProductWrapper>
     )
   }
   return <h2>No partners found for the name</h2>;
